@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hardware Utilities  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="Hardware Utilities  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SwiftletUtilities Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra.com%2Fapi%2Fdocsets%2FSwiftletUtilities.xml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SwiftletUtilities Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Hardware Utilities  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="general-utilities.html">General Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="hardware-utilities.html">Hardware Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="swiftlet-extensions.html">Swiftlet Extensions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/HTMLEntity.html">HTMLEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HardwareInformation.html">HardwareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability.html">Reachability</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AppleHardwareType.html">AppleHardwareType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OperatingSystem.html">OperatingSystem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Image/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSBitmapImageRep.html">NSBitmapImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSImage.html">NSImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSImage/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Published.html">Published</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String/TruncationPosition.html">– TruncationPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='hardware-utilities' class='heading'>Hardware Utilities</h1>
+
+<p><strong>Hardware Utilities</strong> provide commonly used information about the device an app is running on such as the device type (for example <code>iPhoneX</code>), the OS version (for example <code>iOS 11.1</code>) and if the app can connect to the internet.</p>
+
+<p>The following is included:</p>
+
+<ul>
+<li><a href="#AppleHardwareType">AppleHardwareType</a> - Enum that contains a human-readable Apple Device Type (such as <code>iPhoneX</code>).</li>
+<li><a href="#HardwareInformation">HardwareInformation</a> - Provides information about the device an app is running on.</li>
+</ul>
+
+<p><a name="AppleHardwareType"></a></p>
+<h2 id='applehardwaretype' class='heading'>AppleHardwareType</h2>
+
+<p>Used to convert an Apple device model name (in the form <code>iPhone10,3</code>) to a human readable form (such as <code>iPhoneX</code>). This enum works with the <code><a href="Classes/HardwareInformation.html">HardwareInformation</a></code> class to get the type of device the app is running on.</p>
+<h3 id='known-device-types' class='heading'>Known Device Types</h3>
+
+<p>The following device types are handled:</p>
+<h4 id='iphone' class='heading'>iPhone:</h4>
+
+<ul>
+<li><code>iPhone</code> - The original version.</li>
+<li><code>iPhone3G</code></li>
+<li><code>iPhone3GS</code></li>
+<li><code>iPhone4</code></li>
+<li><code>iPhone4S</code></li>
+<li><code>iPhone5</code></li>
+<li><code>iPhone5C</code></li>
+<li><code>iPhone5S</code></li>
+<li><code>iPhone6</code></li>
+<li><code>iPhone6Plus</code></li>
+<li><code>iPhone6S</code></li>
+<li><code>iPhone6SPlus</code></li>
+<li><code>iPhoneSE</code></li>
+<li><code>iPhone7</code></li>
+<li><code>iPhone7Plus</code></li>
+<li><code>iPhone8</code></li>
+<li><code>iPhone8Plus</code></li>
+<li><code>iPhoneX</code></li>
+</ul>
+<h4 id='ipad' class='heading'>iPad</h4>
+
+<ul>
+<li><code>iPad</code> - The original version.</li>
+<li><code>iPad2</code></li>
+<li><code>iPadMini</code></li>
+<li><code>iPad3</code></li>
+<li><code>iPad4</code></li>
+<li><code>iPadAir</code></li>
+<li><code>iPadMini2</code></li>
+<li><code>iPadMini3</code></li>
+<li><code>iPadMini4</code></li>
+<li><code>iPadAir2</code></li>
+<li><code>iPadPro12In</code></li>
+<li><code>iPadPro9In</code></li>
+<li><code>iPad5thGen</code></li>
+<li><code>iPadPro12In2ndGen</code></li>
+<li><code>iPadPro10In</code></li>
+</ul>
+<h4 id='ipod-touch' class='heading'>iPod Touch</h4>
+
+<ul>
+<li><code>iPodTouch</code> - The original version.</li>
+<li><code>iPodTouch2ndGen</code></li>
+<li><code>iPodTouch3rdGen</code></li>
+<li><code>iPodTouch4thGen</code></li>
+<li><code>iPodTouch6thGen</code></li>
+</ul>
+<h4 id='appletv' class='heading'>AppleTV</h4>
+
+<ul>
+<li><code>appleTV2ndGen</code></li>
+<li><code>appleTV3rdGen</code></li>
+<li><code>appleTV4thGen</code></li>
+<li><code>appleTV4K</code></li>
+</ul>
+<h4 id='airpods' class='heading'>AirPods</h4>
+
+<ul>
+<li><code>airPods</code> - The original version.</li>
+</ul>
+<h4 id='applewatch' class='heading'>AppleWatch</h4>
+
+<ul>
+<li><code>appleWatch</code> - The original version.</li>
+<li><code>appleWatchSeries1</code></li>
+<li><code>appleWatchSeries2</code></li>
+<li><code>appleWatchSeries3</code></li>
+</ul>
+<h4 id='homepod' class='heading'>HomePod</h4>
+
+<ul>
+<li><code>homePod</code> - The original version.</li>
+</ul>
+<h4 id='macbook' class='heading'>MacBook</h4>
+
+<ul>
+<li><code>macBookRetina12In2017</code></li>
+<li><code>macBookRetina12In2016</code></li>
+<li><code>macBookRetina12In2015</code></li>
+<li><code>macBook13In2010</code></li>
+<li><code>macBook13InLate2009</code></li>
+<li><code>macBook13In2009</code></li>
+</ul>
+<h4 id='macbook-air' class='heading'>MacBook Air</h4>
+
+<ul>
+<li><code>macBookAir13In2015To2017</code></li>
+<li><code>macBookAir11In2015</code></li>
+<li><code>macBookAir13In2013To2014</code></li>
+<li><code>macBookAir11In2013To2014</code></li>
+<li><code>macBookAir13In2012</code></li>
+<li><code>macBookAir11In2012</code></li>
+<li><code>macBookAir13In2011</code></li>
+<li><code>macBookAir13In2010</code></li>
+<li><code>macBookAir11In2012</code></li>
+<li><code>macBookAir2009</code></li>
+</ul>
+<h4 id='macbook-pro' class='heading'>MacBook Pro</h4>
+
+<ul>
+<li><code>macBookPro15In2017</code></li>
+<li><code>macBookPro13In2017</code></li>
+<li><code>macBookPro15In2016</code></li>
+<li><code>macBookPro13In2016</code></li>
+<li><code>macBookProRetina15In2015</code></li>
+<li><code>macBookProRetina13In2015</code></li>
+<li><code>macBookProRetina15In2013To2014</code></li>
+<li><code>macBookProRetina13In2013To2014</code></li>
+<li><code>macBookProRetina13In2012To2013</code></li>
+<li><code>macBookProRetina15In2012</code></li>
+<li><code>macBookPro15In2012</code></li>
+<li><code>macBookPro13In2012</code></li>
+<li><code>macBookPro17In2011</code></li>
+<li><code>macBookPro15In2011</code></li>
+<li><code>macBookPro13In2011</code></li>
+<li><code>macBookPro17In2010</code></li>
+<li><code>macBookPro15In2011</code></li>
+<li><code>macBookPro13In2011</code></li>
+<li><code>macBookPro17In2010</code></li>
+<li><code>macBookPro13In2010</code></li>
+<li><code>macBookPro17In2009</code></li>
+<li><code>macBookPro15In2009</code></li>
+<li><code>macBookPro13In2009</code></li>
+</ul>
+<h4 id='mac-mini' class='heading'>Mac Mini</h4>
+
+<ul>
+<li><code>macMini2006</code></li>
+<li><code>macMini2007</code></li>
+<li><code>macMini2009</code></li>
+<li><code>macMini2010</code></li>
+<li><code>macMini2011</code></li>
+<li><code>macMini2012</code></li>
+<li><code>macMini2014</code></li>
+</ul>
+<h4 id='mac-pro' class='heading'>Mac Pro</h4>
+
+<ul>
+<li><code>macPro2013</code></li>
+<li><code>macPro2010To2012</code></li>
+<li><code>macPro2009</code></li>
+</ul>
+<h3 id='imac' class='heading'>iMac</h3>
+
+<ul>
+<li><code>iMac21In2017</code></li>
+<li><code>iMacRetina4K21In2017</code></li>
+<li><code>iMacRetina5K27In2017</code></li>
+<li><code>iMac21In2015</code></li>
+<li><code>iMacRetina4K21In2015</code></li>
+<li><code>iMacRetina5K27In2014To2015</code></li>
+<li><code>iMac21In2014</code></li>
+<li><code>iMac21In2013</code></li>
+<li><code>iMac27In2013</code></li>
+<li><code>iMac21In2012</code></li>
+<li><code>iMac27In2012</code></li>
+<li><code>iMac21In2011</code></li>
+<li><code>iMac27In2011</code></li>
+<li><code>iMac21In2011</code></li>
+<li><code>iMac27In2011</code></li>
+<li><code>iMac21In2009To2010</code></li>
+<li><code>iMac27In2009To2010</code></li>
+<li><code>iMac20InOr24In2009</code></li>
+</ul>
+<h3 id='example' class='heading'>Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">device</span> <span class="o">=</span> <span class="kt">AppleHardwareType</span><span class="p">(</span><span class="nv">fromModel</span><span class="p">:</span> <span class="s">"iPhone10,3"</span><span class="p">)</span> 
+</code></pre>
+
+<p><a name="HardwareInformation"></a></p>
+<h2 id='hardwareinformation' class='heading'>HardwareInformation</h2>
+
+<p>Defines a set of convenience properties and functions when working on Apple devices, such as checking the device model name (<code>iPhone10,3</code>), getting the device type (<code>iPhoneX</code>), getting the OS version (<code>iOS 11.1</code>), the current device orientation and internet connection state.</p>
+
+<p>The following properties are available:</p>
+<h3 id='isphone' class='heading'>isPhone</h3>
+
+<p>Returns <code>true</code> if the app is running on an iPhone, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isPhone</span> <span class="p">{</span>
+    <span class="c1">// App is running on an iPhone</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='ispad' class='heading'>isPad</h3>
+
+<p>Returns <code>true</code> if the app is running on an iPad, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isPad</span> <span class="p">{</span>
+    <span class="c1">// App is running on an iPad</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='istv' class='heading'>isTV</h3>
+
+<p>Returns <code>true</code> if the app is running on an Apple TV, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isTV</span> <span class="p">{</span>
+    <span class="c1">// App is running on an Apple TV</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='iscar' class='heading'>isCar</h3>
+
+<p>Returns <code>true</code> if the app is running on a CarPlay connected device, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isCar</span> <span class="p">{</span>
+    <span class="c1">// App is running on CarPlay</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='iswatch' class='heading'>isWatch</h3>
+
+<p>Returns <code>true</code> if the app is running on an Apple Watch, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isWatch</span> <span class="p">{</span>
+    <span class="c1">// App is running on an Apple Watch</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='ismac' class='heading'>isMac</h3>
+
+<p>Returns <code>true</code> if the app is running on a Mac laptop or desktop, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isMac</span> <span class="p">{</span>
+    <span class="c1">// App is running on a Mac</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='modelname' class='heading'>modelName</h3>
+
+<p>Returns the model name of the device the app is running on. For example, <code>iPhone10,3</code> or <code>iPhone10,6</code> for the <code>iPhone X</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">model</span> <span class="o">=</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">modelName</span> 
+</code></pre>
+<h3 id='devicetype' class='heading'>deviceType</h3>
+
+<p>Returns the human-readable type of the device that the app is running on (for example <code>iPhoneX</code>) or <code>unknown</code> if the type cannot be discovered. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">deviceType</span> <span class="o">==</span> <span class="o">.</span><span class="n">iPhoneX</span> <span class="p">{</span>
+    <span class="c1">// The app is running on an iPhone X</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='osversion' class='heading'>osVersion</h3>
+
+<p>Returns the version number (for example <code>iOS 11.1</code>) of the OS installed on the device that the app is running on. For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">version</span> <span class="o">=</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">osVersion</span>
+</code></pre>
+<h3 id='deviceorientation' class='heading'>deviceOrientation</h3>
+
+<p>Returns the current orientation of the device that the app is running on. If the orientation is unknown, a guess will be made based on the main screen&rsquo;s bounds: if the <code>width</code> is less than the <code>height</code>, <code>portrait</code> is returned, else <code>landscapeLeft</code> is returned. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">deviceOrientation</span> <span class="o">==</span> <span class="o">.</span><span class="n">portrait</span> <span class="p">{</span>
+    <span class="c1">// The device is in the portrait position</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='isretinadisplay' class='heading'>isRetinaDisplay</h3>
+
+<p>Returns <code>true</code> if the device the app is running on has a retina display, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isRetinaDisplay</span> <span class="p">{</span>
+    <span class="c1">// The device has a Retina display</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='ishddisplay' class='heading'>isHDDisplay</h3>
+
+<p>Returns <code>true</code> if the device the app is running on has a HD display, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isHDDisplay</span> <span class="p">{</span>
+    <span class="c1">// The device has a HD display</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='screenbounds' class='heading'>screenBounds</h3>
+
+<p>Returns the bounds of the main screen of the device that the app is running on. As of iOS 8.0, these bounds will always be relative to the device&rsquo;s orientation. For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">bounds</span> <span class="o">=</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">screenBounds</span>
+</code></pre>
+<h3 id='isconnectedtonetwork' class='heading'>isConnectedToNetwork</h3>
+
+<p>Returns <code>true</code> if the device the app is running on is connected to the internet, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isConnectedToNetwork</span> <span class="p">{</span>
+    <span class="c1">// The device has an internet connection</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='iswwannetworkconnection' class='heading'>isWWANNetworkConnection</h3>
+
+<p>Returns <code>true</code> if the device the app is running on is connected to the internet via a cellular connection, such as EDGE or GPRS, else returns <code>false</code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">HardwareInformation</span><span class="o">.</span><span class="n">isWWANNetworkConnection</span> <span class="p">{</span>
+    <span class="c1">// The device has an internet via cellular</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2021-05-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

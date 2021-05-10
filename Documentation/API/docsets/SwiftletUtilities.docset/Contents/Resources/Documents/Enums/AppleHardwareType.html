@@ -1,0 +1,3442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AppleHardwareType Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/AppleHardwareType" class="dashAnchor"></a>
+    <a title="AppleHardwareType Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftletUtilities Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra.com%2Fapi%2Fdocsets%2FSwiftletUtilities.xml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SwiftletUtilities Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AppleHardwareType Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../general-utilities.html">General Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../hardware-utilities.html">Hardware Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../swiftlet-extensions.html">Swiftlet Extensions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/HTMLEntity.html">HTMLEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HardwareInformation.html">HardwareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability.html">Reachability</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AppleHardwareType.html">AppleHardwareType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OperatingSystem.html">OperatingSystem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Image/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSBitmapImageRep.html">NSBitmapImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImage.html">NSImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImage/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Published.html">Published</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String/TruncationPosition.html">– TruncationPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AppleHardwareType</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AppleHardwareType</span></code></pre>
+
+                </div>
+              </div>
+            <p>Used to convert an Apple device model name (in the form &ldquo;iPhone10,3&rdquo;) to a human readable form (such as &ldquo;iPhoneX&rdquo;). This enum works with the <code><a href="../Classes/HardwareInformation.html">HardwareInformation</a></code> class to get the type of device the app is running on.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Get human-readable name (iPhoneX)</span>
+<span class="k">let</span> <span class="nv">device</span> <span class="o">=</span> <span class="kt">AppleHardwareType</span><span class="p">(</span><span class="nv">fromModel</span><span class="p">:</span> <span class="s">"iPhone10,3"</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7unknownyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unknown" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7unknownyA2CmF">unknown</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unknown</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/iPhones"></a>
+                <a name="//apple_ref/swift/Section/iPhones" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/iPhones"></a>
+                  <h3 class="section-name"><p>iPhones</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO6iPhoneyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO6iPhoneyA2CmF">iPhone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An original iPhone.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone3GyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone3G" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone3GyA2CmF">iPhone3G</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 3G.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone3G</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9iPhone3GSyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone3GS" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9iPhone3GSyA2CmF">iPhone3GS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 3GS.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone3GS</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone4yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone4yA2CmF">iPhone4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 4.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone4</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone4SyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone4S" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone4SyA2CmF">iPhone4S</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 4S.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone4S</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone5yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone5" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone5yA2CmF">iPhone5</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 5.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone5CyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone5C" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone5CyA2CmF">iPhone5C</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 5C.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone5C</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone5SyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone5S" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone5SyA2CmF">iPhone5S</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 5S.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone5S</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone6yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone6" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone6yA2CmF">iPhone6</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 6.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone6</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11iPhone6PlusyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone6Plus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11iPhone6PlusyA2CmF">iPhone6Plus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 6 Plus.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone6Plus</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone6SyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone6S" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPhone6SyA2CmF">iPhone6S</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 6S.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone6S</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iPhone6SPlusyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone6SPlus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iPhone6SPlusyA2CmF">iPhone6SPlus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 6S Plus.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone6SPlus</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPhoneSEyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhoneSE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPhoneSEyA2CmF">iPhoneSE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone SE.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhoneSE</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone7yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone7" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone7yA2CmF">iPhone7</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 7.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone7</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11iPhone7PlusyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone7Plus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11iPhone7PlusyA2CmF">iPhone7Plus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 7 Plus.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone7Plus</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone8yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPhone8yA2CmF">iPhone8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 8.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11iPhone8PlusyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhone8Plus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11iPhone8PlusyA2CmF">iPhone8Plus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone 8 Plus.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhone8Plus</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPhoneXyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPhoneX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPhoneXyA2CmF">iPhoneX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPhone X</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPhoneX</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/iPads"></a>
+                <a name="//apple_ref/swift/Section/iPads" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/iPads"></a>
+                  <h3 class="section-name"><p>iPads</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO4iPadyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPad" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO4iPadyA2CmF">iPad</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An original iPad.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPad</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO5iPad2yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPad2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO5iPad2yA2CmF">iPad2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad 2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPad2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPadMiniyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadMini" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPadMiniyA2CmF">iPadMini</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Mini</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadMini</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO5iPad3yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPad3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO5iPad3yA2CmF">iPad3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad 3.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPad3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO5iPad4yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPad4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO5iPad4yA2CmF">iPad4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad 4.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPad4</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7iPadAiryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadAir" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7iPadAiryA2CmF">iPadAir</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Air.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadAir</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9iPadMini2yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadMini2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9iPadMini2yA2CmF">iPadMini2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Mini 2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadMini2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9iPadMini3yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadMini3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9iPadMini3yA2CmF">iPadMini3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Mini 3.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadMini3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9iPadMini4yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadMini4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9iPadMini4yA2CmF">iPadMini4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Mini 4.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadMini4</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO8iPadAir2yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadAir2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO8iPadAir2yA2CmF">iPadAir2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Air 4</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadAir2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11iPadPro12InyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadPro12In" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11iPadPro12InyA2CmF">iPadPro12In</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Pro 12&quot;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadPro12In</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO10iPadPro9InyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadPro9In" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO10iPadPro9InyA2CmF">iPadPro9In</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Pro 9&quot;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadPro9In</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO10iPad5thGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPad5thGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO10iPad5thGenyA2CmF">iPad5thGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad 4th Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPad5thGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO17iPadPro12In2ndGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadPro12In2ndGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO17iPadPro12In2ndGenyA2CmF">iPadPro12In2ndGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Pro 12: 2nd Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadPro12In2ndGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11iPadPro10InyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPadPro10In" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11iPadPro10InyA2CmF">iPadPro10In</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Pro 10&quot;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPadPro10In</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/iPod%20Touches"></a>
+                <a name="//apple_ref/swift/Section/iPod Touches" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/iPod%20Touches"></a>
+                  <h3 class="section-name"><p>iPod Touches</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9iPodTouchyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPodTouch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9iPodTouchyA2CmF">iPodTouch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An original iPodTouch.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPodTouch</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch2ndGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPodTouch2ndGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch2ndGenyA2CmF">iPodTouch2ndGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Touch 2nd Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPodTouch2ndGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch3rdGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPodTouch3rdGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch3rdGenyA2CmF">iPodTouch3rdGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPad Touch 3rd Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPodTouch3rdGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch4thGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPodTouch4thGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch4thGenyA2CmF">iPodTouch4thGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPod Touch 4th Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPodTouch4thGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch5thGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPodTouch5thGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch5thGenyA2CmF">iPodTouch5thGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPod Touch 5th Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPodTouch5thGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch6thGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iPodTouch6thGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15iPodTouch6thGenyA2CmF">iPodTouch6thGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An iPodTouch 6th Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iPodTouch6thGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Apple%20TVs"></a>
+                <a name="//apple_ref/swift/Section/Apple TVs" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Apple%20TVs"></a>
+                  <h3 class="section-name"><p>Apple TVs</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO13appleTV2ndGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleTV2ndGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO13appleTV2ndGenyA2CmF">appleTV2ndGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple TV 2nd Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleTV2ndGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO13appleTV3rdGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleTV3rdGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO13appleTV3rdGenyA2CmF">appleTV3rdGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple TV 3rd Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleTV3rdGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO13appleTV4thGenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleTV4thGen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO13appleTV4thGenyA2CmF">appleTV4thGen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple TV 4th Generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleTV4thGen</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9appleTV4KyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleTV4K" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9appleTV4KyA2CmF">appleTV4K</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple TV 4K.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleTV4K</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/AirPods"></a>
+                <a name="//apple_ref/swift/Section/AirPods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/AirPods"></a>
+                  <h3 class="section-name"><p>AirPods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7airPodsyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/airPods" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7airPodsyA2CmF">airPods</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An original AirPod.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">airPods</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO10appleWatchyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleWatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO10appleWatchyA2CmF">appleWatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An original Apple Watch.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleWatch</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO17appleWatchSeries1yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleWatchSeries1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO17appleWatchSeries1yA2CmF">appleWatchSeries1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple Watch Series 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleWatchSeries1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO17appleWatchSeries2yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleWatchSeries2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO17appleWatchSeries2yA2CmF">appleWatchSeries2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple Watch Series 2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleWatchSeries2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO17appleWatchSeries3yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/appleWatchSeries3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO17appleWatchSeries3yA2CmF">appleWatchSeries3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Apple Watch Series 3.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appleWatchSeries3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/HomePods"></a>
+                <a name="//apple_ref/swift/Section/HomePods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/HomePods"></a>
+                  <h3 class="section-name"><p>HomePods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO7homePodyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/homePod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO7homePodyA2CmF">homePod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An original HomePod.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">homePod</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MacBooks"></a>
+                <a name="//apple_ref/swift/Section/MacBooks" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/MacBooks"></a>
+                  <h3 class="section-name"><p>MacBooks</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO21macBookRetina12In2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookRetina12In2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO21macBookRetina12In2017yA2CmF">macBookRetina12In2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookRetina12In2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO21macBookRetina12In2016yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookRetina12In2016" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO21macBookRetina12In2016yA2CmF">macBookRetina12In2016</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2016 MacBook 12&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookRetina12In2016</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO21macBookRetina12In2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookRetina12In2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO21macBookRetina12In2015yA2CmF">macBookRetina12In2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 MacBook 12&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookRetina12In2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15macBook13In2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBook13In2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15macBook13In2010yA2CmF">macBook13In2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010 MacBook 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBook13In2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO19macBook13InLate2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBook13InLate2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO19macBook13InLate2009yA2CmF">macBook13InLate2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Late 2009 MacBook 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBook13InLate2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO15macBook13In2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBook13In2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO15macBook13In2009yA2CmF">macBook13In2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Early-Mid 2009 MacBook 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBook13In2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MacBook%20Air"></a>
+                <a name="//apple_ref/swift/Section/MacBook Air" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/MacBook%20Air"></a>
+                  <h3 class="section-name"><p>MacBook Air</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO24macBookAir13In2015To2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir13In2015To2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO24macBookAir13In2015To2017yA2CmF">macBookAir13In2015To2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015-2017 MacBook Air 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir13In2015To2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir11In2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2015yA2CmF">macBookAir11In2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 MacBook Air 11&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir11In2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO24macBookAir13In2013To2014yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir13In2013To2014" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO24macBookAir13In2013To2014yA2CmF">macBookAir13In2013To2014</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013-2014 MacBook Air 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir13In2013To2014</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO24macBookAir11In2013To2014yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir11In2013To2014" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO24macBookAir11In2013To2014yA2CmF">macBookAir11In2013To2014</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013-2014 MacBook Air 11&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir11In2013To2014</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir13In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir13In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir13In2012yA2CmF">macBookAir13In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 MacBook Air 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir13In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir11In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2012yA2CmF">macBookAir11In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 MacBook Air 11&quot; DIsplay.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir11In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir13In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir13In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir13In2011yA2CmF">macBookAir13In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 MacBook Air 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir13In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir11In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2011yA2CmF">macBookAir11In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 MacBook Air 11&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir11In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir13In2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir13In2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir13In2010yA2CmF">macBookAir13In2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010 MacBook Air 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir13In2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir11In2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookAir11In2010yA2CmF">macBookAir11In2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010 MacBook Air 11&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir11In2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO14macBookAir2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookAir2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO14macBookAir2009yA2CmF">macBookAir2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 MacBook Air.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookAir2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MacBook%20Pros"></a>
+                <a name="//apple_ref/swift/Section/MacBook Pros" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/MacBook%20Pros"></a>
+                  <h3 class="section-name"><p>MacBook Pros</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro15In2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2017yA2CmF">macBookPro15In2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2017 MacBook Pro 15&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro15In2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro13In2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2017yA2CmF">macBookPro13In2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2017 MacBook Pro 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro13In2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2016yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro15In2016" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2016yA2CmF">macBookPro15In2016</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2016 MacBook Pro 15&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro15In2016</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2016yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro13In2016" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2016yA2CmF">macBookPro13In2016</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2016 MacBook Pro 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro13In2016</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO24macBookProRetina15In2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookProRetina15In2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO24macBookProRetina15In2015yA2CmF">macBookProRetina15In2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 MacBook Pro 15&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookProRetina15In2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO24macBookProRetina13In2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookProRetina13In2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO24macBookProRetina13In2015yA2CmF">macBookProRetina13In2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 MacBook Pro 13&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookProRetina13In2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO30macBookProRetina15In2013To2014yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookProRetina15In2013To2014" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO30macBookProRetina15In2013To2014yA2CmF">macBookProRetina15In2013To2014</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013-2014 MacBook Pro 15&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookProRetina15In2013To2014</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO30macBookProRetina13In2013To2014yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookProRetina13In2013To2014" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO30macBookProRetina13In2013To2014yA2CmF">macBookProRetina13In2013To2014</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013-2014 MacBook Pro 13&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookProRetina13In2013To2014</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO30macBookProRetina13In2012To2013yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookProRetina13In2012To2013" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO30macBookProRetina13In2012To2013yA2CmF">macBookProRetina13In2012To2013</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012-2013 MacBook Pro 13&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookProRetina13In2012To2013</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO24macBookProRetina15In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookProRetina15In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO24macBookProRetina15In2012yA2CmF">macBookProRetina15In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 MacBook Pro 15&quot; Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookProRetina15In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro15In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2012yA2CmF">macBookPro15In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 MacBook Pro 15&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro15In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro13In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2012yA2CmF">macBookPro13In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 MacBook Pro 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro13In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro17In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro17In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro17In2011yA2CmF">macBookPro17In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 MacBook Pro 17&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro17In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro15In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2011yA2CmF">macBookPro15In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 MacBook Pro 15&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro15In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro13In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2011yA2CmF">macBookPro13In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 MacBook Pro 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro13In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro17In2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro17In2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro17In2010yA2CmF">macBookPro17In2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010 MacBook Pro 17&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro17In2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro13In2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2010yA2CmF">macBookPro13In2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010 MacBook Pro 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro13In2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro17In2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro17In2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro17In2009yA2CmF">macBookPro17In2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 MacBook Pro 17&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro17In2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro15In2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro15In2009yA2CmF">macBookPro15In2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 MacBook Pro 15&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro15In2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macBookPro13In2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18macBookPro13In2009yA2CmF">macBookPro13In2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 MacBook Pro 13&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macBookPro13In2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Mac%20Minis"></a>
+                <a name="//apple_ref/swift/Section/Mac Minis" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Mac%20Minis"></a>
+                  <h3 class="section-name"><p>Mac Minis</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2006yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2006" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2006yA2CmF">macMini2006</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2006 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2006</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2007yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2007" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2007yA2CmF">macMini2007</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2007 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2007</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2009yA2CmF">macMini2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2010yA2CmF">macMini2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2011yA2CmF">macMini2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2012yA2CmF">macMini2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2014yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macMini2014" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO11macMini2014yA2CmF">macMini2014</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2014 Mac Mini.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macMini2014</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Mac%20Pros"></a>
+                <a name="//apple_ref/swift/Section/Mac Pros" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Mac%20Pros"></a>
+                  <h3 class="section-name"><p>Mac Pros</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO10macPro2013yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macPro2013" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO10macPro2013yA2CmF">macPro2013</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013 Mac Pro.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macPro2013</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO16macPro2010To2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macPro2010To2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO16macPro2010To2012yA2CmF">macPro2010To2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2010-2012 Mac Pro.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macPro2010To2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO10macPro2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/macPro2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO10macPro2009yA2CmF">macPro2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 Mac Pro.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">macPro2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/iMacs"></a>
+                <a name="//apple_ref/swift/Section/iMacs" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/iMacs"></a>
+                  <h3 class="section-name"><p>iMacs</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2017yA2CmF">iMac21In2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2017 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO20iMacRetina4K21In2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMacRetina4K21In2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO20iMacRetina4K21In2017yA2CmF">iMacRetina4K21In2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2017 iMac 21&quot; 4K Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMacRetina4K21In2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO20iMacRetina5K27In2017yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMacRetina5K27In2017" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO20iMacRetina5K27In2017yA2CmF">iMacRetina5K27In2017</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2017 iMac 27&quot; 5K Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMacRetina5K27In2017</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2015yA2CmF">iMac21In2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO20iMacRetina4K21In2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMacRetina4K21In2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO20iMacRetina4K21In2015yA2CmF">iMacRetina4K21In2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 iMac 21&quot; 4K Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMacRetina4K21In2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO26iMacRetina5K27In2014To2015yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMacRetina5K27In2014To2015" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO26iMacRetina5K27In2014To2015yA2CmF">iMacRetina5K27In2014To2015</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2015 iMac 27&quot; 5K Retina Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMacRetina5K27In2014To2015</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2014yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2014" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2014yA2CmF">iMac21In2014</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2014 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2014</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2013yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2013" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2013yA2CmF">iMac21In2013</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2013</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac27In2013yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac27In2013" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac27In2013yA2CmF">iMac27In2013</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2013 iMac 27&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac27In2013</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2012yA2CmF">iMac21In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac27In2012yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac27In2012" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac27In2012yA2CmF">iMac27In2012</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2012 iMac 27&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac27In2012</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac21In2011yA2CmF">iMac21In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO12iMac27In2011yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac27In2011" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO12iMac27In2011yA2CmF">iMac27In2011</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2011 iMac 27&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac27In2011</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18iMac21In2009To2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac21In2009To2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18iMac21In2009To2010yA2CmF">iMac21In2009To2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009-2010 iMac 21&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac21In2009To2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18iMac27In2009To2010yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac27In2009To2010" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18iMac27In2009To2010yA2CmF">iMac27In2009To2010</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009-2010 iMac 27&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac27In2009To2010</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO18iMac20InOr24In2009yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/iMac20InOr24In2009" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO18iMac20InOr24In2009yA2CmF">iMac20InOr24In2009</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A 2009 iMac 20&quot; or 24&quot; Display.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iMac20InOr24In2009</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializers"></a>
+                  <h3 class="section-name"><p>Initializers</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17SwiftletUtilities17AppleHardwareTypeO9fromModelACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fromModel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17SwiftletUtilities17AppleHardwareTypeO9fromModelACSS_tcfc">init(fromModel:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Takes a device model name in the form &ldquo;iPhone10,3&rdquo; and sets the enum to its human readable counterpart &ldquo;iPhoneX&rdquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">fromModel</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>model</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The given device model string to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The human readable name or <code><a href="../Enums/AppleHardwareType.html#/s:17SwiftletUtilities17AppleHardwareTypeO7unknownyA2CmF">unknown</a></code> if unable to convert.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2021-05-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

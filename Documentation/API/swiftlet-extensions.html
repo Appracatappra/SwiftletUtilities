@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Swiftlet Extensions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="Swiftlet Extensions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SwiftletUtilities Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra.com%2Fapi%2Fdocsets%2FSwiftletUtilities.xml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SwiftletUtilities Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Swiftlet Extensions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="general-utilities.html">General Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="hardware-utilities.html">Hardware Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="swiftlet-extensions.html">Swiftlet Extensions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/HTMLEntity.html">HTMLEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HardwareInformation.html">HardwareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability.html">Reachability</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AppleHardwareType.html">AppleHardwareType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OperatingSystem.html">OperatingSystem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Image/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSBitmapImageRep.html">NSBitmapImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSImage.html">NSImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSImage/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Published.html">Published</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String/TruncationPosition.html">– TruncationPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='swiftlet-extensions' class='heading'>Swiftlet Extensions</h1>
+
+<p><strong>Swiftlet Extensions</strong> provide several useful features to common, built-in SwiftUI and Swift data types such as converting <code>Color</code> to/from hex strings (for example <code>#FF0000</code>), creating <code>Image</code> instances from Base64 encoded strings stored in <code>Data</code> objects and encoding <code>Images</code> as Base64 strings or <code>Data</code> objects.</p>
+
+<p>The following extensions are available:</p>
+
+<ul>
+<li><a href="#Color-Extensions">Color Extensions</a> - Extends <code>Color</code> to support the Action Data controls and adds convenience methods for working with colors in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><a href="#Data-Extensions">Data Extensions</a> - Extends <code>Data</code> to support the Action Data controls and adds convenience methods for working with data properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><a href="#Image-Extensions">Image Extensions</a> - Extends <code>Image</code> to support the Action Data controls and adds convenience methods for working with image properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><a href="#String-Extensions">String Extensions</a> - Extends <code>String</code> to support the Action Data controls and adds convenience methods for working with <code>UIImage</code> and <code>UIColor</code> properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+</ul>
+
+<p><a name="Color-Extensions"></a></p>
+<h2 id='color-extensions' class='heading'>Color Extensions</h2>
+
+<p>Extends <code>Color</code> to support the Action Data controls and adds convenience methods for working with colors in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</p>
+<h3 id='color-as-hex-string' class='heading'>Color as Hex String</h3>
+
+<p>Because <code>Color</code> is not <code>Codable</code>, it cannot directly be included in a data model object as a property. <strong>Swiftlet Extensions</strong> include several helper methods to work with color as a hex string to get around this limitation.</p>
+
+<p>A hex string can be in either the <code>rrggbb</code> or <code>rrggbbaa</code> formats where:</p>
+
+<ul>
+<li><code>rr</code> - Specifies the red component as a hex value in the range 00 to FF.</li>
+<li><code>gg</code> - Specifies the green component as a hex value in the range 00 to FF.</li>
+<li><code>bb</code> - Specifies the blue component as a hex value in the range 00 to FF.</li>
+<li><code>aa</code> - Specifies the alpha component as a hex value in the range 00 to FF.</li>
+</ul>
+
+<p>The hex string can optionally start with the prefix of <code>#</code>. </p>
+<h4 id='examples' class='heading'>Examples:</h4>
+<pre class="highlight swift"><code><span class="c1">// Assign a color from a string</span>
+<span class="k">let</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">Color</span> <span class="o">~=</span> <span class="s">"#FF0000"</span>
+
+<span class="c1">// Initialize a color from a hex string</span>
+<span class="k">let</span> <span class="nv">green</span> <span class="o">=</span> <span class="kt">Color</span><span class="p">(</span><span class="nv">fromHex</span><span class="p">:</span> <span class="s">"00FF00"</span><span class="p">)</span>
+
+<span class="c1">// Convert color to a hex string</span>
+<span class="k">let</span> <span class="nv">white</span> <span class="o">=</span> <span class="kt">Color</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+</code></pre>
+
+<p><a name="Data-Extensions"></a></p>
+<h2 id='data-extensions' class='heading'>Data Extensions</h2>
+
+<p>Extends <code>Data</code> to support the Action Data controls and adds convenience methods for working with data properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</p>
+<h3 id='working-with-images' class='heading'>Working with Images</h3>
+
+<p>Because <code>Image</code> is not <code>Codable</code>, it cannot directly be included in a data model object as a property. <strong>Swiftlet Extensions</strong> include several helper methods to work with images as Base 64 encoded data to get around this limitation.</p>
+<h4 id='examples' class='heading'>Examples:</h4>
+<pre class="highlight swift"><code><span class="c1">// Assign data from an image</span>
+<span class="k">let</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">~=</span> <span class="kt">Image</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Icon.png"</span><span class="p">)</span>
+
+<span class="c1">// Convert data to an image</span>
+<span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">icon</span><span class="o">.</span><span class="n">image</span>
+</code></pre>
+
+<p><a name="Image-Extensions"></a></p>
+<h2 id='image-extensions' class='heading'>Image Extensions</h2>
+
+<p>Extends <code>Image</code> to support the Action Data controls and adds convenience methods for working with image properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</p>
+<h3 id='working-with-images' class='heading'>Working with Images</h3>
+
+<p>Because <code>Image</code> is not <code>Codable</code>, it cannot directly be included in a data model object as a property. <strong>Swiftlet Extensions</strong> include several helper methods to work with images as Base 64 encoded data to get around this limitation.</p>
+<h4 id='examples' class='heading'>Examples:</h4>
+<pre class="highlight swift"><code><span class="c1">// Assign data from an image</span>
+<span class="k">let</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">~=</span> <span class="kt">Image</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Icon.png"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">icon2</span> <span class="o">=</span> <span class="kt">Image</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Icon2.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+<span class="c1">// Assign image from data</span>
+<span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">Image</span> <span class="o">~=</span> <span class="n">icon</span>
+
+<span class="c1">// Base 64 encode an image</span>
+<span class="k">let</span> <span class="nv">base64</span> <span class="o">=</span> <span class="kt">Image</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Icon.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span>
+
+<span class="c1">// Assign image from base 64 encoded string</span>
+<span class="k">let</span> <span class="nv">image2</span><span class="p">:</span> <span class="kt">Image</span> <span class="o">~=</span> <span class="n">base64</span> 
+
+<span class="c1">// Initialize an image from a base 64 encoded string</span>
+<span class="k">let</span> <span class="nv">image3</span> <span class="o">=</span> <span class="kt">Image</span><span class="p">(</span><span class="nv">fromString</span><span class="p">:</span> <span class="n">base64</span><span class="p">)</span> 
+</code></pre>
+
+<p><a name="String-Extensions"></a></p>
+<h2 id='string-extensions' class='heading'>String Extensions</h2>
+
+<p>Extends <code>String</code> to support the Action Data controls and adds convenience methods for working with <code>Image</code> and <code>Color</code> properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</p>
+<h3 id='color-as-hex-string' class='heading'>Color as Hex String</h3>
+
+<p>Because <code>Color</code> is not <code>Codable</code>, it cannot directly be included in a data model object as a property. <strong>Swiftlet Extensions</strong> include several helper methods to work with color as a hex string to get around this limitation.</p>
+
+<p>A hex string can be in either the <code>rrggbb</code> or <code>rrggbbaa</code> formats where:</p>
+
+<ul>
+<li><code>rr</code> - Specifies the red component as a hex value in the range 00 to FF.</li>
+<li><code>gg</code> - Specifies the green component as a hex value in the range 00 to FF.</li>
+<li><code>bb</code> - Specifies the blue component as a hex value in the range 00 to FF.</li>
+<li><code>aa</code> - Specifies the alpha component as a hex value in the range 00 to FF.</li>
+</ul>
+
+<p>The hex string can optionally start with the prefix of <code>#</code>. </p>
+<h4 id='examples' class='heading'>Examples:</h4>
+<pre class="highlight swift"><code><span class="c1">// Assign a string from a color</span>
+<span class="k">let</span> <span class="nv">red</span><span class="p">:</span> <span class="kt">String</span> <span class="o">~=</span> <span class="s">"FF0000"</span>
+
+<span class="c1">// Get a UIColor from a hex string</span>
+<span class="k">let</span> <span class="nv">uiRed</span> <span class="o">=</span> <span class="n">red</span><span class="o">.</span><span class="n">color</span>
+
+<span class="c1">// Initialize a string from a color</span>
+<span class="k">let</span> <span class="nv">white</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="nv">fromColor</span><span class="p">:</span> <span class="kt">Color</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+</code></pre>
+<h3 id='working-with-images' class='heading'>Working with Images</h3>
+
+<p>Because <code>Image</code> is not <code>Codable</code>, it cannot directly be included in a data model object as a property. <strong>Swiftlet Extensions</strong> include several helper methods to work with images as Base 64 encoded data to get around this limitation.</p>
+<h4 id='examples' class='heading'>Examples:</h4>
+<pre class="highlight swift"><code><span class="c1">// Get an image</span>
+<span class="k">let</span> <span class="nv">icon</span> <span class="o">=</span> <span class="kt">Image</span><span class="p">(</span><span class="nv">namde</span><span class="p">:</span> <span class="s">"Icon.png"</span><span class="p">)</span>
+
+<span class="c1">// Assign a string from an image</span>
+<span class="k">let</span> <span class="nv">base64</span><span class="p">:</span> <span class="kt">String</span> <span class="o">~=</span> <span class="n">icon</span>
+
+<span class="c1">// Get a UIImage from a base 64 encoded string</span>
+<span class="k">let</span> <span class="nv">myIcon</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">image</span>
+
+<span class="c1">// Initialize a string from an image</span>
+<span class="k">let</span> <span class="nv">iconString</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="nv">fromImage</span><span class="p">:</span> <span class="n">icon</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2021-05-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

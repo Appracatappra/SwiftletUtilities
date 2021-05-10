@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSImage Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/NSImage" class="dashAnchor"></a>
+    <a title="NSImage Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftletUtilities Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra.com%2Fapi%2Fdocsets%2FSwiftletUtilities.xml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SwiftletUtilities Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NSImage Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../general-utilities.html">General Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../hardware-utilities.html">Hardware Utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../swiftlet-extensions.html">Swiftlet Extensions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/HTMLEntity.html">HTMLEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HardwareInformation.html">HardwareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability.html">Reachability</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AppleHardwareType.html">AppleHardwareType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OperatingSystem.html">OperatingSystem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Image/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSBitmapImageRep.html">NSBitmapImageRep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImage.html">NSImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImage/ImageRepresentationFormat.html">– ImageRepresentationFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Published.html">Published</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String/TruncationPosition.html">– TruncationPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/View.html">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NSImage</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NSImage</span></code></pre>
+
+                </div>
+              </div>
+            <p>Extends <code>NSImage</code> to support the Action Data controls and adds convenience methods for working with image properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign aa image from Base 64 encoded String in macOS</span>
+<span class="k">let</span> <span class="nv">imageString</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">NSImage</span> <span class="o">~=</span> <span class="n">imageString</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE7pngData10Foundation0E0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pngData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE7pngData10Foundation0E0VSgvp">pngData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the image as data in the png format.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Get png Data from image</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="n">pngData</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pngData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE7jpgData10Foundation0E0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/jpgData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE7jpgData10Foundation0E0VSgvp">jpgData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the image as data in the jpeg format.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Get jpeg Data from image</span>
+<span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="n">jpgData</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">jpgData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE25ImageRepresentationFormatO"></a>
+                    <a name="//apple_ref/swift/Enum/ImageRepresentationFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE25ImageRepresentationFormatO">ImageRepresentationFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines the Image Representation Format that will be used when converting a <code>NSImage</code> to <code>String</code> (via <code>toString()</code>) or to <code>Data</code> (via <code>toData()</code>).</p>
+
+                        <a href="../Extensions/NSImage/ImageRepresentationFormat.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageRepresentationFormat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Custom%20Operators"></a>
+                <a name="//apple_ref/swift/Section/Custom Operators" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Custom%20Operators"></a>
+                  <h3 class="section-name"><p>Custom Operators</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE2teoiyyABz_SStFZ"></a>
+                    <a name="//apple_ref/swift/Method/~=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE2teoiyyABz_SStFZ">~=(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the <code>NSImage</code> from the given <code>String</code> Instance.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign an image from Base 64 encoded String in macOS</span>
+<span class="k">let</span> <span class="nv">imageString</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">NSImage</span> <span class="o">~=</span> <span class="n">imageString</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">~=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">NSImage</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE2teoiyyABz_10Foundation4DataVtFZ"></a>
+                    <a name="//apple_ref/swift/Method/~=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE2teoiyyABz_10Foundation4DataVtFZ">~=(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the <code>NSImage</code> from the given <code>Data</code> instance.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign an image from Base 64 encoded Data in macOS</span>
+<span class="k">let</span> <span class="nv">imageData</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">NSImage</span> <span class="o">~=</span> <span class="n">imageData</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">~=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">NSImage</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Public Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Functions"></a>
+                  <h3 class="section-name"><p>Public Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE8toString19imageRepresentationSSAbCE05ImageG6FormatO_tF"></a>
+                    <a name="//apple_ref/swift/Method/toString(imageRepresentation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE8toString19imageRepresentationSSAbCE05ImageG6FormatO_tF">toString(imageRepresentation:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts the <code>NSImage</code> to a <code>String</code> representation encoded in Base 64.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign an image to Base 64 encoded String in macOS</span>
+<span class="k">let</span> <span class="nv">imageString</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toString</span><span class="p">(</span><span class="nv">imageRepresentation</span><span class="p">:</span> <span class="kt"><a href="../Extensions/NSImage/ImageRepresentationFormat.html">ImageRepresentationFormat</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">pngRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageRepresentation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Determines the representation that will be used when converting the image. The default is <code>pngRepresentation</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code>NSImage</code> in the requested representation converted to a Base 64 encoded string.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE6toData19imageRepresentation10Foundation0E0VSgAbCE05ImageG6FormatO_tF"></a>
+                    <a name="//apple_ref/swift/Method/toData(imageRepresentation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE6toData19imageRepresentation10Foundation0E0VSgAbCE05ImageG6FormatO_tF">toData(imageRepresentation:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converst the <code>NSImage</code> to a <code>Data</code> representation.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign an image to Base 64 encoded Data in macOS</span>
+<span class="k">let</span> <span class="nv">imageData</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toData</span><span class="p">(</span><span class="nv">imageRepresentation</span><span class="p">:</span> <span class="kt"><a href="../Extensions/NSImage/ImageRepresentationFormat.html">ImageRepresentationFormat</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">pngRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageRepresentation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Determins the representation that will be used when converting the image. The default is <code>pngRepresentation</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code>NSImage</code> in the requested representation converted to a raw <code>Data</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializers"></a>
+                  <h3 class="section-name"><p>Initializers</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE10fromStringABSgSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fromString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE10fromStringABSgSS_tcfc">init(fromString:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>NSImage</code> instance from a Base 64 encoded string.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign an image from Base 64 encoded String in macOS</span>
+<span class="k">let</span> <span class="nv">imageString</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span><span class="o">.</span><span class="nf">toString</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">fromString</span><span class="p">:</span> <span class="n">imageString</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">fromString</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Base 64 encoded <code>String</code> representing an image.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSImageC17SwiftletUtilitiesE5namedABSgSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(named:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSImageC17SwiftletUtilitiesE5namedABSgSS_tcfc">init(named:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new <code>NSImage</code> instance from a string specifying the name of an image added as an asset.</p>
+<h2 id='examples' class='heading'>Examples:</h2>
+<pre class="highlight swift"><code><span class="c1">// Assign an image from an asset name in macOS</span>
+<span class="k">let</span> <span class="nv">imageString</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Background.png"</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Base 64 encoded <code>String</code> representing an image.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2021-05-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
