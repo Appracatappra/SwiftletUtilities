@@ -1,5 +1,6 @@
 # Swiftlet Utilities
 
+![](https://img.shields.io/badge/license-MIT-green) ![](https://img.shields.io/badge/maintained%3F-Yes-green) ![](https://img.shields.io/badge/iOS-13.0-red) ![](https://img.shields.io/badge/macOS-10.15-red) ![](https://img.shields.io/badge/tvOS-13.0-red) ![](https://img.shields.io/badge/watchOS-6.0-red) ![](https://img.shields.io/badge/release-v1.0.0-blue)
 
 **Swiftlet Utilities** provides several useful functions that are common across many apps written in SwiftUI and Xcode. These include features such as testing to see if an app can connect to the internet, ect.
 
@@ -9,6 +10,7 @@ Additionally, many built-in types (such as `Color`, `String` and `Data`) have be
 
 **Swiftlet Utilities** are support on iOS, tvOS, watchOS and macOS.
 
+<a name="Installation"></a>
 ## Installation
 
 **Swift Package Manager** (Xcode 11 and above)
@@ -21,7 +23,7 @@ Additionally, many built-in types (such as `Color`, `String` and `Data`) have be
 
 Supporting multiple dependency managers makes maintaining a library exponentially more complicated and time consuming.
 
-Since, the **Swift Package Manager** is integrated with Xcode 11 (and greater), it the easiest choice to support going further.
+Since, the **Swift Package Manager** is integrated with Xcode 11 (and greater), it's the easiest choice to support going further.
 
 <a name="Swiftlet-Extensions"></a>
 ## Swiftlet Extensions
@@ -40,11 +42,6 @@ let green = Color(fromHex: "00FF00")
 // Convert color to a hex string
 let white = Color.white.toHex()
 ```
-
-<a name="Free-to-Use"></a>
-## Free to Use
-
-Because of the basic nature of the functions and utilities provided by **Swiftlet Utilities**, Appracatappra is offering them 100% free to use in any app project of your choosing. Additionally, we intent to keep expanding **Swiftlet Utilities** with new features which will also be provided free of charge.
 
 <a name="MIT-License"></a>
 ### MIT License
