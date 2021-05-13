@@ -30,9 +30,9 @@
     },
     {
       "file": "/Users/kmullins/Xcode Projects/GitHub/SwiftletUtilities/Sources/SwiftletUtilities/SharedCode/Utilities/Reachability.swift",
-      "line": 11,
-      "symbol": "Reachability",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "line": 74,
+      "symbol": "Reachability.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

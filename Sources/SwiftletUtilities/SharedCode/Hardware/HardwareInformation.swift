@@ -8,11 +8,17 @@
 
 import Foundation
 
-#if !os(watchOS)
+#if os(watchOS)
+import WatchKit
+#else
 import SystemConfiguration
 #endif
 
 #if os(iOS)
+import UIKit
+#endif
+
+#if os(tvOS)
 import UIKit
 #endif
 
