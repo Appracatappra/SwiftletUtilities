@@ -141,7 +141,7 @@
             
             <h1 id='swiftlet-utilities' class='heading'>Swiftlet Utilities</h1>
 
-<p><img src="https://img.shields.io/badge/license-MIT-green" alt=""> <img src="https://img.shields.io/badge/maintained%3F-Yes-green" alt=""> <img src="https://img.shields.io/badge/swift-5.4-green" alt=""> <img src="https://img.shields.io/badge/iOS-13.0-red" alt=""> <img src="https://img.shields.io/badge/macOS-10.15-red" alt=""> <img src="https://img.shields.io/badge/tvOS-13.0-red" alt=""> <img src="https://img.shields.io/badge/watchOS-6.0-red" alt=""> <img src="https://img.shields.io/badge/release-v1.0.6-blue" alt=""></p>
+<p><img src="https://img.shields.io/badge/license-MIT-green" alt=""> <img src="https://img.shields.io/badge/maintained%3F-Yes-green" alt=""> <img src="https://img.shields.io/badge/swift-5.4-green" alt=""> <img src="https://img.shields.io/badge/iOS-13.0-red" alt=""> <img src="https://img.shields.io/badge/macOS-10.15-red" alt=""> <img src="https://img.shields.io/badge/tvOS-13.0-red" alt=""> <img src="https://img.shields.io/badge/watchOS-6.0-red" alt=""> <img src="https://img.shields.io/badge/release-v1.0.7-blue" alt=""></p>
 
 <p><strong>Swiftlet Utilities</strong> provides several useful functions that are common across many apps written in SwiftUI and Xcode. These include features such as testing to see if an app can connect to the internet, etc.</p>
 
@@ -172,6 +172,44 @@
 
 <p>Since, the <strong>Swift Package Manager</strong> is integrated with Xcode 11 (and greater), it&rsquo;s the easiest choice to support going further.</p>
 
+<p><a name="General-Extensions"></a></p>
+<h2 id='general-extensions' class='heading'>General Extensions</h2>
+
+<p><strong>General Utilities</strong> provide several, general utility classes to handle thing such as network connectivity.</p>
+<h3 id='provided-extensions' class='heading'>Provided Extensions</h3>
+
+<p>The following extensions are provided:</p>
+
+<ul>
+<li><strong>HTMLEntity</strong> - Decodes the given string converting any HTML Entity codes into their resulting characters.</li>
+<li><strong>Reachability</strong> - Test to see if we have an active network connection.</li>
+</ul>
+
+<p><a name="Hardware-Extensions"></a></p>
+<h2 id='hardware-extensions' class='heading'>Hardware Extensions</h2>
+
+<p><strong>Hardware Utilities</strong> provide commonly used information about the device an app is running on such as the device type (for example <code>iPhoneX</code>), the OS version (for example <code>iOS 11.1</code>) and if the app can connect to the internet.</p>
+<h3 id='provided-extensions' class='heading'>Provided Extensions</h3>
+
+<p>The following extensions are provided:</p>
+
+<ul>
+<li><strong>AppleHardwareType</strong> - Used to convert an Apple device model name (in the form <code>iPhone10,3</code>) to a human readable form (such as <code>iPhoneX</code>). This enum works with the <code><a href="Classes/HardwareInformation.html">HardwareInformation</a></code> class to get the type of device the app is running on.</li>
+<li><strong>HardwareInformation</strong> - Defines a set of convenience properties and functions when working on Apple devices, such as checking the device model name (<code>iPhone10,3</code>), getting the device type (<code>iPhoneX</code>), getting the OS version (<code>iOS 11.1</code>), the current device orientation and internet connection state:
+
+<ul>
+<li><strong>isPhone</strong> - Returns <code>true</code> if the app is running on an iPhone, else returns <code>false</code>.</li>
+<li><strong>isPad</strong> - Returns <code>true</code> if the app is running on an iPad, else returns <code>false</code>.</li>
+<li><strong>isTV</strong> - Returns <code>true</code> if the app is running on an Apple TV, else returns <code>false</code>.</li>
+<li><strong>isCar</strong> - Returns <code>true</code> if the app is running on a CarPlay connected device, else returns <code>false</code>.</li>
+<li><strong>isWatch</strong> - Returns <code>true</code> if the app is running on an Apple Watch, else returns <code>false</code>.</li>
+<li><strong>isMac</strong> - Returns <code>true</code> if the app is running on a Mac laptop or desktop, else returns <code>false</code>.</li>
+<li><strong>modelName</strong> - Returns the model name of the device the app is running on. For example, <code>iPhone10,3</code> or <code>iPhone10,6</code> for the <code>iPhone X</code>.</li>
+<li><strong>deviceType</strong> - Returns the human-readable type of the device that the app is running on (for example <code>iPhoneX</code>) or <code>unknown</code> if the type cannot be discovered.</li>
+<li><strong>osVersion</strong> - Returns the version number (for example <code>iOS 11.1</code>) of the OS installed on the device that the app is running on.</li>
+</ul></li>
+</ul>
+
 <p><a name="Swiftlet-Extensions"></a></p>
 <h2 id='swiftlet-extensions' class='heading'>Swiftlet Extensions</h2>
 
@@ -186,11 +224,26 @@
 <span class="c1">// Convert color to a hex string</span>
 <span class="k">let</span> <span class="nv">white</span> <span class="o">=</span> <span class="kt">Color</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
 </code></pre>
+<h3 id='provided-extensions' class='heading'>Provided Extensions</h3>
+
+<p>The following extensions are provided:</p>
+
+<ul>
+<li><strong>Color</strong> - Extends <code>Color</code> to support the Action Data controls and adds convenience methods for working with colors in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><strong>Data</strong> - Extends <code>Data</code> to support the Action Data controls and adds convenience methods for working with data properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><strong>Image</strong> - Extends <code>Image</code> to support the Action Data controls and adds convenience methods for working with image properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><strong>String</strong> - Extends <code>String</code> to support the Action Data controls and adds convenience methods for working with <code>Image</code> and <code>Color</code> properties in a <code>Codable</code>, <code>Encodable</code> or <code>Decodable</code> class.</li>
+<li><strong>Array</strong> - Extends <code>Array</code> with new functions for working with collections.</li>
+<li><strong>Double</strong> - Extends <code>Double</code> with several useful features.</li>
+<li><strong>Int</strong> - Extends <code>Int</code> with several useful features.</li>
+<li><strong>@Published</strong> - Allows properties that are marked <code>@Published</code> and allows them to be <code>Codable</code> with <code>Encode</code> and <code>Decode</code> conformance.</li>
+<li><strong>View</strong> - Conditionally apply modifiers depending on the target operating system.</li>
+</ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2021-05-13)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2021-05-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

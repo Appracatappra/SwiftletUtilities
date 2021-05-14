@@ -8,6 +8,11 @@ The following extensions are available:
 * [Data Extensions](#Data-Extensions) - Extends `Data` to support the Action Data controls and adds convenience methods for working with data properties in a `Codable`, `Encodable` or `Decodable` class.
 * [Image Extensions](#Image-Extensions) - Extends `Image` to support the Action Data controls and adds convenience methods for working with image properties in a `Codable`, `Encodable` or `Decodable` class.
 * [String Extensions](#String-Extensions) - Extends `String` to support the Action Data controls and adds convenience methods for working with `UIImage` and `UIColor` properties in a `Codable`, `Encodable` or `Decodable` class.
+* [Array Extensions](#Array-Extensions) - Extends `Array` with new functions for working with collections.
+* [Double Extensions](#Double-Extensions) - Extends `Double` with several useful features.
+* [Int Extensions](#Int-Extensions) - Extends `Int` with several useful features.
+* [@Published Extensions](#Published-Extensions) - Allows properties that are marked `@Published` and allows them to be `Codable` with `Encode` and `Decode` conformance.
+* [View Extensions](#View Extensions) - Conditionally apply modifiers depending on the target operating system.
 
 <a name="Color-Extensions"></a>
 ## Color Extensions
@@ -137,4 +142,71 @@ let myIcon = base64.image
 
 // Initialize a string from an image
 let iconString = String(fromImage: icon)
+```
+
+<a name="Array-Extensions"></a>
+## Array Extensions
+
+Extends `Array` with new functions for working with collections.
+ 
+### Examples:
+ 
+```swift
+// Build a sample array.
+var values = ["One", "Two"]
+ 
+// Add new values if they don't already exist
+values.update(with: ["One", "Three"])
+```
+
+<a name="Double-Extensions"></a>
+## Double Extensions
+
+Extends `Double` with several useful features.
+ 
+### Example:
+
+```swift
+let n:Double = 1000.00
+ 
+// Returns 1,000
+let text = n.formatted()
+```
+
+<a name="Int-Extensions"></a>
+## Int Extensions
+
+Extends `Int` with several useful features.
+ 
+### Example:
+
+```swift
+let n:Int = 1000
+ 
+// Returns 1,000
+let text = n.formatted()
+```
+
+<a name="Published-Extensions"></a>
+## @Published Extensions
+
+Allows properties that are marked `@Published` and allows them to be `Codable` with `Encode` and `Decode` conformance.
+
+<a name="View-Extensions"></a>
+## View Extensions
+
+Conditionally apply modifiers depending on the target operating system.
+
+### Example:
+
+```swift
+struct ContentView: View {
+	var body: some View {
+	    Text("Unicorn")
+	        .font(.system(size: 10))
+	        .ifOS(.macOS, .tvOS) {
+	            $0.font(.system(size: 20))
+	        }
+	}
+}
 ```

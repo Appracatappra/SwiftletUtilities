@@ -7,7 +7,17 @@
 
 import Foundation
 
-/// Adds several useful features to Integers.
+/**
+ Extends `Int` with several useful features.
+ 
+ ## Example:
+ ```swift
+ let n:Int = 1000
+ 
+ // Returns 1,000
+ let text = n.formatted()
+ ```
+ */
 public extension Int {
     
     /**

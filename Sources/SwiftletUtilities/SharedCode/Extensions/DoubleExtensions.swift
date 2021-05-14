@@ -7,7 +7,17 @@
 
 import Foundation
 
-/// Adds several useful features to Doubles.
+/**
+ Extends `Double` with several useful features.
+ 
+ ## Example:
+ ```swift
+ let n:Double = 1000.00
+ 
+ // Returns 1,000
+ let text = n.formatted()
+ ```
+ */
 public extension Double {
     
     /**
