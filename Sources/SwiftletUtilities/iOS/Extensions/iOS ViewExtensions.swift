@@ -34,7 +34,11 @@ extension View {
         let controller = UIHostingController(rootView: self)
         
         controller.view.frame = CGRect(x: 0, y: CGFloat(Int.max), width: 1, height: 1)
+        #if swift(>=5.5)
+        // Temporarily lock out this line because it's failing to complie in the latest version of Swift 5.5 Beta 3 on iOS.
+        #else
         UIApplication.shared.windows.first!.rootViewController?.view.addSubview(controller.view)
+        #endif
         
         let size = controller.sizeThatFits(in: UIScreen.main.bounds.size)
         controller.view.bounds = CGRect(origin: .zero, size: size)
