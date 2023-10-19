@@ -55,6 +55,7 @@ public enum OperatingSystem {
  }
  ```
 */
+@available(*, deprecated, message: "This extension will be removed in a future build.")
 extension View {
     
     /**
@@ -75,6 +76,7 @@ extension View {
      - Parameter operatingSystems: A list of operating systems where the given modifier should be applied.
      - Parameter modifier: The modifier to conditionally by applied to the view.
     */
+    @available(*, deprecated, message: "This function will be removed in a future build.")
     @ViewBuilder
     public func ifOS<Content: View>(
         _ operatingSystems: OperatingSystem...,

@@ -177,7 +177,7 @@ extension UIImage {
     ///   - posY: The Y coordinate to write the image to.
     ///   - topImageSize: The size of the `UIImage` to overlay.
     ///   - combinedImage: A callback that receives the new combined image.
-    func overlayWithAsync(image: UIImage, posX: CGFloat, posY: CGFloat, topImageSize: CGSize,
+    public func overlayWithAsync(image: UIImage, posX: CGFloat, posY: CGFloat, topImageSize: CGSize,
                      combinedImage: @escaping (UIImage) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             let newWidth = self.size.width < posX + image.size.width ? posX + image.size.width : self.size.width
@@ -204,7 +204,7 @@ extension UIImage {
     ///   - posY: The Y coordinate to write the image to.
     ///   - topImageSize: The size of the `UIImage` to overlay or `nil` to use the input image size.
     /// - Returns: Returns the composited `UIImage`.
-    func overlayWith(image: UIImage, posX:CGFloat, posY:CGFloat, topImageSize:CGSize? = nil) -> UIImage {
+    public func overlayWith(image: UIImage, posX:CGFloat, posY:CGFloat, topImageSize:CGSize? = nil) -> UIImage {
         var overlaySize:CGSize
         
         // Get the size for the

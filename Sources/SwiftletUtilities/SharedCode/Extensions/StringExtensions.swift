@@ -34,7 +34,7 @@ extension String {
     }
     
     /// Options available when trimming a string.
-    enum TrimmingOptions {
+    public enum TrimmingOptions {
         /// Remove all whitespace characters from the string.
         case all
         
@@ -274,7 +274,7 @@ extension String {
     /// - Parameters:
     ///   - value: The value to add.
     ///   - separator: The separator sequence to use.
-    mutating func concat(_ value:String, separator:String = ",") {
+    mutating public func concat(_ value:String, separator:String = ",") {
         if self == "" {
             self = value
         } else {
@@ -287,7 +287,7 @@ extension String {
     ///   - spaces: Defines the type of trim operation that should be performed.
     ///   - characterSet: Defines the type of whipspaces to remove.
     /// - Returns: The string with the requested whitespaces removed.
-    func trimming(spaces: TrimmingOptions, using characterSet: CharacterSet = .whitespacesAndNewlines) ->  String {
+    public func trimming(spaces: TrimmingOptions, using characterSet: CharacterSet = .whitespacesAndNewlines) ->  String {
         switch spaces {
         case .all: return trimmingAllSpaces(using: characterSet)
         case .leading: return trimingLeadingSpaces(using: characterSet)
@@ -334,7 +334,7 @@ extension String {
     
     /// Returns the string Base 64 encoded.
     /// - Returns: The encoded string or empty string ("") if unable to encode.
-    func base64Encoded() -> String {
+    public func base64Encoded() -> String {
         if let value = data(using: .utf8)?.base64EncodedString() {
             return value
         } else {
@@ -344,7 +344,7 @@ extension String {
     
     /// Returns the string decoded from Base 64.
     /// - Returns: The decoded string or empty string ("") if unable to decode.
-    func base64Decoded() -> String {
+    public func base64Decoded() -> String {
         guard let data = Data(base64Encoded: self) else { return "" }
         
         if let value = String(data: data, encoding: .utf8) {
@@ -359,7 +359,7 @@ extension String {
     ///   - inputPattern: The pattern that you are looking for.
     ///   - partialMatch: If `true` allow for partial pattern matches. If `false`, the entire string must match.
     /// - Returns: Returns `true` if the string contains the pattern.
-    func hasPattern(_ inputPattern:String, partialMatch:Bool = true) -> Bool {
+    public func hasPattern(_ inputPattern:String, partialMatch:Bool = true) -> Bool {
         var text = self.lowercased()
         var pattern = inputPattern.lowercased()
         
@@ -378,7 +378,7 @@ extension String {
     
     /// Returns a random part from a pipe "|" separated string.
     /// - Returns: A random part or the entire string if no pipe "|" exist.
-    func randomPart() -> String {
+    public func randomPart() -> String {
         
         guard self.contains("|") else {
             return self
@@ -394,7 +394,7 @@ extension String {
 }
 
 extension StringProtocol {
-    subscript(offset: Int) -> Character {
+    public subscript(offset: Int) -> Character {
         self[index(startIndex, offsetBy: offset)]
     }
 }
