@@ -18,6 +18,7 @@ import Foundation
  let device = AppleHardwareType(fromModel: "iPhone10,3")
  ```
  */
+@available(*, deprecated, message: "This enum is out of date and will be removed in a future build.")
 public enum AppleHardwareType {
     case unknown
     

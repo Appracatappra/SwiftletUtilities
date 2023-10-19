@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LogManager
 
 #if os(watchOS)
 import WatchKit
@@ -105,6 +106,16 @@ open class HardwareInformation {
         #endif
     }
     
+    /// CTests to see if this is an iOS/iPadOS app running on an Apple Silicone Mac.
+    /// - Returns: Returns `true` if running on an Apple Silicone Mac else returns `false`.
+    public static func isiOSAppOnMac() -> Bool {
+        if #available(iOS 14.0, *) {
+            return ProcessInfo.processInfo.isiOSAppOnMac
+        }
+        
+        return false
+    }
+    
     /// Returns the model name of the device the app is running on. For example, `iPhone10,3` or `iPhone10,6` for the `iPhone X`.
     public static var modelName: String {
         var systemInfo = utsname()
@@ -122,6 +133,7 @@ open class HardwareInformation {
     }
     
     /// Returns the human readable type of the device that the app is running on (for example `iPhoneX`) or `unknown` if the type cannot be discovered.
+    @available(*, deprecated, message: "This property is out of date and will be removed in a future build.")
     public static var deviceType: AppleHardwareType {
         return AppleHardwareType(fromModel: modelName)
     }
@@ -135,5 +147,109 @@ open class HardwareInformation {
         #else
             return "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
         #endif
+    }
+    
+    /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
+    ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
+    public static var deviceDimentions:String {
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        let screenWidth = Int(screenSize.width)
+        let screenHeight = Int(screenSize.height)
+        
+        return "\(screenWidth)x\(screenHeight)"
+    }
+    
+    #if os(tvOS)
+    /// Creates a fake orientation so I can ealisy maintain compatibility between the iOS/iPadOS version and the tvOS version of the SwiftUI code.
+    public static var deviceOrientation: UIDeviceOrientation {
+        return .landscapeLeft
+    }
+    #else
+    /// This property returns the interface orientation of the apps main, active window.
+    public static var windowOrientation: UIInterfaceOrientation {
+        
+        // Ensure that we are running on the main thread.
+        guard Thread.isMainThread else {
+            return .unknown
+        }
+        
+        // Ensure that a scene has been connected.
+        guard UIApplication.shared.connectedScenes.count > 0 else {
+            return .unknown
+        }
+        
+        // Ensure we can get a scene and that it is the foreground scene.
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, windowScene.activationState == .foregroundActive else {
+            return .unknown
+        }
+        
+        // Return the scene's orientation.
+        return windowScene.interfaceOrientation
+    }
+
+    /// Returns the current orientation of the device.
+    public static var deviceOrientation: UIDeviceOrientation {
+        switch windowOrientation {
+        case .unknown:
+            // If the orientation is unknown, use the screen height and width to guess at the rotation.
+            if screenWidth > screenHeight {
+                return .landscapeLeft
+            } else {
+                return .portrait
+            }
+        case .portrait:
+            return .portrait
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
+        case .landscapeLeft:
+            return .landscapeLeft
+        case .landscapeRight:
+            return .landscapeRight
+        @unknown default:
+            return .unknown
+        }
+    }
+    #endif
+    
+    /// Returns the full width of the main screen of the device the app is running on.
+    public static var screenWidth:Int {
+        let screenSize: CGRect = UIScreen.main.bounds
+        return Int(screenSize.width)
+    }
+    
+    /// Returns the height of the main screen of the device that the app is running on.
+    public static var screenHeight:Int {
+        let screenSize: CGRect = UIScreen.main.bounds
+        return Int(screenSize.height)
+    }
+    
+    /// Returns the screen size for the main device screen that the app is running on.
+    public static let screenSize = UIScreen.main.bounds.size
+    
+    /// Lists out all font family names and the name of every font variation in the family for use inside of a Font call in an app.
+    /// - Remark: Based on https://codewithchris.com/common-mistakes-with-adding-custom-fonts-to-your-ios-app/
+    public static func ListInstalledFonts(contains:String = "") {
+        
+        // Title
+        Debug.log("-- INSTALLED FONTS --")
+        
+        // Cycle through all font families and variations
+        for family: String in UIFont.familyNames
+        {
+            if contains == "" {
+                Debug.log("\(family)")
+            } else if family.lowercased().contains(contains) {
+                Debug.log("\(family)")
+            }
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                if contains == "" {
+                    Debug.log("== \(names)")
+                } else if names.lowercased().contains(contains) {
+                    Debug.log("== \(names)")
+                }
+            }
+        }
     }
 }

@@ -27,6 +27,7 @@ import Network
  
  - Remark: The static `isConnectedToNetwork` property has been deprecated and is provided as backward compatibility with older versions of the library. Please use `Reachability.shared.isReachable` going forward.
  */
+@available(*, deprecated, message: "This function no longer works on modern devices and will be removed in a future build. Use `NetworkConnection.isConnectedToNetwork()` instead.")
 public class Reachability: ObservableObject {
     
     // MARK: - Static Properties

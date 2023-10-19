@@ -34,4 +34,29 @@ public extension Int {
         return formatter.string(from: NSNumber(value: self)) ?? ""
     }
     
+    /// Converts a `String` to an `Int`.
+    /// - Parameter text: The text holding the number.
+    /// - Parameter defaultValue: The default value to return if the text cannot be converted.
+    /// - Returns: Returns the `String` as an `Int` or the `defaultValue` if it cannot be converted.
+    static func from(_ text:String, defaultValue:Int = 0) -> Int {
+        if let value = Int(text) {
+            return value
+        } else {
+            return defaultValue
+        }
+    }
+    
+    /// Converts a `Substring` to an `Int`.
+    /// - Parameter text: The text holding the number.
+    /// - Parameter defaultValue: The default value to return if the text cannot be converted.
+    /// - Returns: Returns the `String` as an `Int` or the `defaultValue` if it cannot be converted.
+    static func from(_ text:Substring, defaultValue:Int = 0) -> Int {
+        return from(String(text), defaultValue: defaultValue)
+    }
+    
+    /// Converts the `Int` to a `String`.
+    /// - Returns: Returns the `Int` as a `String`.
+    func print() -> String {
+        return "\(self)"
+    }
 }
