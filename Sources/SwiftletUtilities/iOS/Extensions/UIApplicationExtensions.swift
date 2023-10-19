@@ -6,7 +6,7 @@
 //  From: https://www.avanderlee.com/swift/skstorereviewcontroller-app-ratings/
 //
 
-#if !os(macOS)
+#if os(iOS) || os(tvOS)
 import Foundation
 import UIKit
 

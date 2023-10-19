@@ -5,6 +5,7 @@
 //  Created by Kevin Mullins on 12/3/22.
 //
 
+#if !os(watchOS)
 import Foundation
 import SystemConfiguration
 
@@ -46,3 +47,4 @@ open class NetworkConnection {
         
     }
 }
+#endif

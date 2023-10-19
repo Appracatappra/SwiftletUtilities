@@ -149,23 +149,12 @@ open class HardwareInformation {
         #endif
     }
     
-    /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
-    ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
-    public static var deviceDimentions:String {
-        let screenSize: CGRect = UIScreen.main.bounds
-        
-        let screenWidth = Int(screenSize.width)
-        let screenHeight = Int(screenSize.height)
-        
-        return "\(screenWidth)x\(screenHeight)"
-    }
-    
     #if os(tvOS)
     /// Creates a fake orientation so I can ealisy maintain compatibility between the iOS/iPadOS version and the tvOS version of the SwiftUI code.
     public static var deviceOrientation: UIDeviceOrientation {
         return .landscapeLeft
     }
-    #else
+    #elseif os(iOS)
     /// This property returns the interface orientation of the apps main, active window.
     public static var windowOrientation: UIInterfaceOrientation {
         
@@ -212,6 +201,18 @@ open class HardwareInformation {
     }
     #endif
     
+    #if os(iOS)
+    /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
+    ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
+    public static var deviceDimentions:String {
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        let screenWidth = Int(screenSize.width)
+        let screenHeight = Int(screenSize.height)
+        
+        return "\(screenWidth)x\(screenHeight)"
+    }
+    
     /// Returns the full width of the main screen of the device the app is running on.
     public static var screenWidth:Int {
         let screenSize: CGRect = UIScreen.main.bounds
@@ -252,4 +253,5 @@ open class HardwareInformation {
             }
         }
     }
+    #endif
 }
