@@ -12,6 +12,7 @@ import SwiftUI
 /**
  Defines a list of available OS types that can be used with the SwitfUI extension `.ifOS`function.
  */
+@available(*, deprecated, message: "This extension will be removed in a future build.")
 public enum OperatingSystem {
     /// The app is running on a Mac.
     case macOS
