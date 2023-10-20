@@ -28,7 +28,7 @@ extension String {
   ///
   ///     "we're having dinner in the garden".titlecaseString // We're Having Dinner In The Garden
   ///     "TheSwiftProgrammingLanguage" // The Swift Programming Language
-  func titlecased() -> String {
+  public func titlecased() -> String {
     if self.count <= 1 {
       return self.uppercased()
     }
