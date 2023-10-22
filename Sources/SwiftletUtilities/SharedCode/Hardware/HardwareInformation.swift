@@ -201,7 +201,7 @@ open class HardwareInformation {
     }
     #endif
     
-    #if os(iOS)
+    #if !os(macOS)
     /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
     ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
     public static var deviceDimentions:String {
