@@ -6,7 +6,7 @@
 //  Copyright © 2021 Appracatappra, LLC. All rights reserved.
 //
 
-#if os(iOS)
+#if !os(macOS)
 import Foundation
 import SwiftUI
 

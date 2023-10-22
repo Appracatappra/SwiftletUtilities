@@ -5,7 +5,7 @@
 //  Created by Kevin Mullins on 4/15/21.
 //
 
-#if os(iOS)
+#if !os(macOS)
 import Foundation
 import SwiftUI
 
