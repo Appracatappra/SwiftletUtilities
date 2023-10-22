@@ -29,7 +29,7 @@ open class ObfuscationProvider {
     // MARK: - Static Functions
     /// Gets the "ASCII" value of the given character.
     /// - Parameter character: The character to get the code for.
-    /// - Returns: The "ASCII" code for the given character.
+    /// - Returns: The "ASCII" code for the given character or `-1` if the character cannot be converted.
     public static func Ascii(_ character:String) -> Int {
         
         // Find position in character set
@@ -41,7 +41,7 @@ open class ObfuscationProvider {
         }
         
         // Not found
-        return 0
+        return -1
     }
     
     /// Returns the character for the given "ASCII" code.
@@ -67,6 +67,12 @@ open class ObfuscationProvider {
     public static func tumble(direction:Direction, character:String, position:Int) -> String {
         var index = Ascii(character)
         var counter = position
+        
+        // Ensure the character can be tumbled
+        guard index >= 0 else {
+            // No, it can't tumble. Just return the input character.
+            return character
+        }
         
         // Offset the index by the given amount.
         while counter > 0 {
