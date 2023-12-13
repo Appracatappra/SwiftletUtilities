@@ -1,6 +1,6 @@
 # Swiftlet Utilities
 
-![](https://img.shields.io/badge/license-MIT-green) ![](https://img.shields.io/badge/maintained%3F-Yes-green) ![](https://img.shields.io/badge/swift-5.4-green) ![](https://img.shields.io/badge/iOS-13.0-red) ![](https://img.shields.io/badge/macOS-10.15-red) ![](https://img.shields.io/badge/tvOS-13.0-red) ![](https://img.shields.io/badge/watchOS-6.0-red) ![](https://img.shields.io/badge/release-v1.0.8-blue)
+![](https://img.shields.io/badge/license-MIT-green) ![](https://img.shields.io/badge/maintained%3F-Yes-green) ![](https://img.shields.io/badge/swift-5.4-green) ![](https://img.shields.io/badge/iOS-17.0-red) ![](https://img.shields.io/badge/macOS-14.0-red) ![](https://img.shields.io/badge/tvOS-17.0-red) ![](https://img.shields.io/badge/watchOS-10.0-red) ![](https://img.shields.io/badge/dependency-LogManager-orange) 
 
 **Swiftlet Utilities** provides several useful functions that are common across many apps written in SwiftUI and Xcode. These include features such as testing to see if an app can connect to the internet, etc.
 
@@ -15,7 +15,7 @@ Additionally, many built-in types (such as `Color`, `String` and `Data`) have be
 
 **Swift Package Manager** (Xcode 11 and above)
 
-1. Select **File** > **Swift Packages** > **Add Package Dependency…** from the **File** menu.
+1. In Xcode, select the **File** > **Add Package Dependency…** menu item.
 2. Paste `https://github.com/Appracatappra/SwiftletUtilities.git` in the dialog box.
 3. Follow the Xcode's instruction to complete the installation.
 
@@ -28,7 +28,7 @@ Since, the **Swift Package Manager** is integrated with Xcode 11 (and greater), 
 <a name="General-Extensions"></a>
 ## General Extensions
 
-**General Utilities** provide several, general utility classes to handle thing such as network connectivity.
+**General Utilities** provide several, general utility classes to handle things such as network connectivity.
 
 ### Provided Extensions
 
@@ -46,7 +46,7 @@ The following extensions are provided:
 
 The following extensions are provided:
 
-* **AppleHardwareType** - Used to convert an Apple device model name (in the form `iPhone10,3`) to a human readable form (such as `iPhoneX`). This enum works with the `HardwareInformation` class to get the type of device the app is running on.
+* **AppleHardwareType** - Deprecated] Used to convert an Apple device model name (in the form `iPhone10,3`) to a human readable form (such as `iPhoneX`). This enum works with the `HardwareInformation` class to get the type of device the app is running on.
 * **HardwareInformation** - Defines a set of convenience properties and functions when working on Apple devices, such as checking the device model name (`iPhone10,3`), getting the device type (`iPhoneX`), getting the OS version (`iOS 11.1`), the current device orientation and internet connection state:
 	* **isPhone** - Returns `true` if the app is running on an iPhone, else returns `false`.
 	* **isPad** - Returns `true` if the app is running on an iPad, else returns `false`. 
@@ -89,3 +89,7 @@ The following extensions are provided:
 * **Int** - Extends `Int` with several useful features.
 * **@Published** - Allows properties that are marked `@Published` and allows them to be `Codable` with `Encode` and `Decode` conformance.
 * **View** - Conditionally apply modifiers depending on the target operating system.
+
+# Documentation
+
+The **Package** includes full **DocC Documentation** for all features.
