@@ -355,6 +355,53 @@ extension NSImage {
     
     /// Returns a `NSImage` from the given URL scaled to the requested size.
     /// - Parameters:
+    ///   - bundleURL: A URL pointing to an image resource.
+    ///   - size: A `CGSize` object containing the requested `width` and `height` for the image.
+    ///   - scale: [Optional] The requested scale for the image. The default is `1.0`.
+    /// - Returns: The requested image scaled to the requested size of `nil` if the image could not be loaded.
+    public class func scaledImage(bundleURL:URL?,  to size: CGSize, scale:CGFloat = 1.0) -> NSImage? {
+        // Validate
+        guard let bundleURL else {
+            Debug.error(subsystem: "NSImageExtensions", category: "scaledImage", "ScaledImage: Cannot located image at \(String(describing: bundleURL))")
+            return nil
+        }
+        
+        // Validate data
+        guard let imageData = try? Data(contentsOf: bundleURL) else {
+            Debug.error(subsystem: "NSImageExtensions", category: "scaledImage", "ScaledImage: Cannot turn image \(String(describing: bundleURL)) into NSData")
+            return nil
+        }
+
+        return scaledImage(data:imageData, to:size, scale: scale)
+    }
+    
+    /// Returns a `NSImage` from the given URL scaled to the requested size.
+    /// - Parameters:
+    ///   - bundleURL: A URL pointing to an image resource.
+    ///   - scale: [Optional] The requested scale for the image. The default is `1.0`.
+    /// - Returns: The requested image scaled to the requested size of `nil` if the image could not be loaded.
+    public class func scaledImage(bundleURL:URL?, scale:CGFloat = 1.0) -> NSImage? {
+        // Validate
+        guard let bundleURL else {
+            Debug.error(subsystem: "NSImageExtensions", category: "scaledImage", "ScaledImage: Cannot located image at \(String(describing: bundleURL))")
+            return nil
+        }
+        
+        // Validate data
+        guard let imageData = try? Data(contentsOf: bundleURL) else {
+            Debug.error(subsystem: "NSImageExtensions", category: "scaledImage", "ScaledImage: Cannot turn image \(String(describing: bundleURL)) into NSData")
+            return nil
+        }
+        
+        guard let size = sizeOfImageAt(url: bundleURL) else {
+            return nil
+        }
+
+        return scaledImage(data:imageData, to:size, scale: scale)
+    }
+    
+    /// Returns a `NSImage` from the given URL scaled to the requested size.
+    /// - Parameters:
     ///   - url: The URL of the source image.
     ///   - scale: [Optional] The requested scale for the image. The default is `1.0`.
     /// - Returns: The requested image scaled to the requested size of `nil` if the image could not be loaded.
