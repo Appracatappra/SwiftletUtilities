@@ -19,6 +19,10 @@ import SystemConfiguration
 import UIKit
 #endif
 
+#if os(macOS)
+import AppKit
+#endif
+
 #if os(tvOS)
 import UIKit
 #endif
@@ -201,7 +205,39 @@ open class HardwareInformation {
     }
     #endif
     
-    #if !os(macOS)
+    #if os(macOS)
+    /// Simumates the device orientation on macOS to support cross-platform developement in a universal app.
+    /// - Returns: Always returns the `.landscapeRight` for macOS.
+    public static var deviceOrientation: UIDeviceOrientation {
+        return .landscapeRight
+    }
+    
+    /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
+    ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
+    public static var deviceDimentions:String {
+        let screenSize:CGSize = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1024, height: 800)
+        
+        let screenWidth = Int(screenSize.width)
+        let screenHeight = Int(screenSize.height)
+        
+        return "\(screenWidth)x\(screenHeight)"
+    }
+    
+    /// Returns the full width of the main screen of the device the app is running on.
+    public static var screenWidth:Int {
+        let screenSize:CGSize = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1024, height: 800)
+        return Int(screenSize.width)
+    }
+    
+    /// Returns the height of the main screen of the device that the app is running on.
+    public static var screenHeight:Int {
+        let screenSize:CGSize = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1024, height: 800)
+        return Int(screenSize.height)
+    }
+    
+    /// Returns the screen size for the main device screen that the app is running on.
+    public static let screenSize = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1024, height: 800)
+    #else
     /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
     ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
     public static var deviceDimentions:String {
