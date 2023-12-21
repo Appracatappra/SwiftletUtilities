@@ -35,7 +35,7 @@ public extension View {
         return self
     }
 }
-#elseif !os(macOS)
+#elseif !os(macOS) && !os(watchOS)
 // Our custom view modifier to track rotation and
 // call our action
 public struct DeviceRotationViewModifier: ViewModifier {

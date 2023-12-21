@@ -237,7 +237,9 @@ open class HardwareInformation {
     
     /// Returns the screen size for the main device screen that the app is running on.
     public static let screenSize = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1024, height: 800)
-    #else
+    #endif
+    
+    #if os(iOS)
     /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
     ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
     public static var deviceDimentions:String {

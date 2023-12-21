@@ -8,7 +8,9 @@
 #if !os(macOS)
 import Foundation
 import SwiftUI
+#endif
 
+#if !os(macOS) && !os(watchOS)
 /**
  Extends `View` to support the Action Data controls and adds convenience methods for working with `Image` properties in a `Codable`, `Encodable` or `Decodable` class.
  
