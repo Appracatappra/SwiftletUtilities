@@ -10,6 +10,15 @@ Additionally, many built-in types (such as `Color`, `String` and `Data`) have be
 
 **Swiftlet Utilities** are support on iOS, tvOS, watchOS and macOS.
 
+## Support
+
+If you find `SwiftletUtilities` useful and would like to help support its continued development and maintenance, please consider making a small donation, especially if you are using it in a commercial product:
+
+<a href="https://www.buymeacoffee.com/KevinAtAppra" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+It's through the support of contributors like yourself, I can continue to build, release and maintain high-quality, well documented Swift Packages like `SwiftletUtilities` for free.
+
+
 <a name="Installation"></a>
 ## Installation
 
