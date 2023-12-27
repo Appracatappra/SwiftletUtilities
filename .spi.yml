@@ -1,0 +1,12 @@
+version: 1
+builder:
+  configs:
+  - platform: ios
+    scheme: SwiftletUtilities
+  - platform: macos-xcodebuild
+    scheme: SwiftletUtilities
+  - platform: tvos
+    scheme: SwiftletUtilities
+  - platform: watchos
+    scheme: SwiftletUtilities
+  - documentation_targets: [SwiftletUtilities]
