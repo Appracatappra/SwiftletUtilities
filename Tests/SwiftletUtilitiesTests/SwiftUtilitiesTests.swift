@@ -29,4 +29,5 @@ final class SwiftUtilitiesTests: XCTestCase {
         let text = value.formatted()
         XCTAssert(text == "1,000")
     }
+    
 }

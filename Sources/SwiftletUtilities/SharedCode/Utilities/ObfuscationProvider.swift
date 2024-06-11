@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftletUtilities
 
 /// `ObfuscationProvider` is a generic utility to provice a simply obfuscation of a string of text.
 ///  - Remark: This is NOT a cryptographically secure process! It's only meant to hide specific values against casual "prying-eyes".

@@ -14,7 +14,7 @@ import struct Combine.Published
 /**
  Enables `Encodable` for properties that are marked `@Published`.
  */
-extension Published: Encodable where Value: Encodable {
+extension Published: @retroactive Encodable where Value: Encodable {
     
     /**
     Encodes a property marked `@Published`.
@@ -41,7 +41,7 @@ extension Published: Encodable where Value: Encodable {
 /**
  Enables `Decodable` for properties that are marked `@Published`.
  */
-extension Published: Decodable where Value: Decodable {
+extension Published: @retroactive Decodable where Value: Decodable {
     
     /**
      Decodes a property marked `@Published`.
