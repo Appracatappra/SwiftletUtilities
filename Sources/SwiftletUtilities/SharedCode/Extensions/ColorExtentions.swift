@@ -215,7 +215,7 @@ extension Color {
     /**
      Holds the color scheme defined by the frontend UI.
      */
-    public static var colorScheme: ColorScheme = .light
+    public nonisolated(unsafe) static var colorScheme: ColorScheme = .light
     
     /**
      Returns the system gray level 1 color.

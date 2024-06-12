@@ -16,7 +16,7 @@ open class NetworkConnection {
     public typealias NetworkStatusChanged = (Bool) -> Void
     
     // MARK: - Public Static Properties
-    public static let shared:NetworkConnection = NetworkConnection()
+    public nonisolated(unsafe) static let shared:NetworkConnection = NetworkConnection()
     
     // MARK: - Properties
     /// Provides an instance of the Network path monitor.

@@ -28,13 +28,13 @@ public enum OperatingSystem {
 
     // MARK: - Static Constants
     #if os(macOS)
-    static let current = macOS
+    static nonisolated(unsafe) let current = macOS
     #elseif os(iOS)
-    static let current = iOS
+    static nonisolated(unsafe) let current = iOS
     #elseif os(tvOS)
-    static let current = tvOS
+    static nonisolated(unsafe) let current = tvOS
     #elseif os(watchOS)
-    static let current = watchOS
+    static nonisolated(unsafe) let current = watchOS
     #else
     #error("Unsupported platform")
     #endif

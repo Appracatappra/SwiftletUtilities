@@ -23,7 +23,7 @@ open class ObfuscationProvider {
     
     // MARK: - Static Properties
     // Holds the charaset used as a sault in the obfuscation process
-    public static let characterSet = "0123456789 AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz!@#$%^&*()_-+={}[]|:;,./?"
+    public nonisolated(unsafe) static let characterSet = "0123456789 AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz!@#$%^&*()_-+={}[]|:;,./?"
     
     // MARK: - Static Functions
     /// Gets the "ASCII" value of the given character.
