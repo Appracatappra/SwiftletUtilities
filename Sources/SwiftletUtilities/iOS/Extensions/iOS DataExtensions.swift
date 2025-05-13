@@ -30,7 +30,7 @@ extension Data {
      let imageData: Data ~= Image(named: "Background.png")
      ```
      */
-    public static func ~= ( left: inout Data, right: Image) {
+    @MainActor public static func ~= ( left: inout Data, right: Image) {
         left = right.toData()!
     }
     

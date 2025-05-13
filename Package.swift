@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 6.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 // Privacy Manifest Info: https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/adding_a_privacy_manifest_to_your_app_or_third-party_sdk
 // Privacy Manifest Example: https://apnspush.com/add-privacy-manifest-sdk
@@ -25,7 +25,11 @@ let package = Package(
         .target(
             name: "SwiftletUtilities",
             dependencies: ["LogManager"],
-            resources: [.process("Resources")]),
+            resources: [.process("Resources")],
+            swiftSettings: [
+                .swiftLanguageMode(.v6)
+            ]
+        ),
         .testTarget(
             name: "SwiftletUtilitiesTests",
             dependencies: ["SwiftletUtilities"]),

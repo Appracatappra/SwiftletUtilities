@@ -45,6 +45,7 @@ import UIKit
  }
  ```
  */
+@MainActor
 open class HardwareInformation {
     
     /// Returns `true` if the app is running on an iPhone, else returns `false`.

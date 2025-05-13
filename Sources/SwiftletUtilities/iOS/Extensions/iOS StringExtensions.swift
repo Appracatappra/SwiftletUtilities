@@ -31,7 +31,7 @@ extension String {
      let hex: String ~= Image(named: "Background.png")
      ```
      */
-    public static func ~= ( left: inout String, right: Image) {
+    @MainActor public static func ~= ( left: inout String, right: Image) {
         left = right.toString()
     }
     
@@ -60,7 +60,7 @@ extension String {
      let hex = String(fromImage: Image(named: "Background.png"))
      ```
      */
-    public init(fromImage image: Image) {
+    @MainActor public init(fromImage image: Image) {
         self = image.toString()
     }
 }

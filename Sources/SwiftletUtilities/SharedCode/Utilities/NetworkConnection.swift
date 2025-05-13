@@ -11,12 +11,12 @@ import SystemConfiguration
 import Network
 
 /// A utility to check if the device the app is running on has network connectivity.
-open class NetworkConnection {
+open class NetworkConnection: @unchecked Sendable {
     /// Handler for the network connection statu changing.
     public typealias NetworkStatusChanged = (Bool) -> Void
     
     // MARK: - Public Static Properties
-    public nonisolated(unsafe) static let shared:NetworkConnection = NetworkConnection()
+    public static let shared:NetworkConnection = NetworkConnection()
     
     // MARK: - Properties
     /// Provides an instance of the Network path monitor.

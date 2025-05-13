@@ -17,8 +17,12 @@ open class Execute {
     /// Runs the given block of code on the main UI thread.
     /// - Parameter perform: The action to perform on the main thread.
     static public func onMain(perform: @escaping Perform) {
+        // Capture the action
+        nonisolated(unsafe) let action = perform
+        
+        // Execute the given action on the main thread.
         DispatchQueue.main.async {
-            perform()
+            action()
         }
     }
     
@@ -27,9 +31,12 @@ open class Execute {
     ///   - seconds: The number of seconds to wait before executing the code.
     ///   - perform: The given code to execute on the main thread
     static public func afterDelay(seconds:Double, perform:@escaping Perform) {
+        // Capture the action
+        nonisolated(unsafe) let action = perform
+        
         // Wait the given amount of seconds and execute the function.
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            perform()
+            action()
         }
     }
 }

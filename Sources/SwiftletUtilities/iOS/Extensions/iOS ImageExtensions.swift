@@ -79,7 +79,7 @@ extension Image {
      
      - Returns: The `Image` in the requested representation converted to a Base 64 encoded string.
      */
-    public func toString(imageRepresentation: ImageRepresentationFormat = .pngRepresentation) -> String {
+    @MainActor public func toString(imageRepresentation: ImageRepresentationFormat = .pngRepresentation) -> String {
         var rawData: Data?
         let image = self.toUIImage()
         
@@ -110,7 +110,7 @@ extension Image {
      
      - Returns: The `Image` in the requested representation converted to a raw `Data`.
      */
-    public func toData(imageRepresentation: ImageRepresentationFormat = .pngRepresentation) -> Data? {
+    @MainActor public func toData(imageRepresentation: ImageRepresentationFormat = .pngRepresentation) -> Data? {
         var rawData: Data?
         let image = self.toUIImage()
         
