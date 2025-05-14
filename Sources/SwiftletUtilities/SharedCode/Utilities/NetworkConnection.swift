@@ -5,13 +5,59 @@
 //  Created by Kevin Mullins on 12/3/22.
 //
 
-#if !os(watchOS)
+#if os(watchOS)
+import Foundation
+import Network
+
+/// A utility to check if the device the app is running on has network connectivity.
+open class NetworkConnection: Observable, @unchecked Sendable {
+    
+    // MARK: - Static Properties
+    /// Provides a common, shared instance of the class.
+    public static let shared = NetworkConnection()
+    
+    // MARK: - Private Properties
+    /// A common network monitor.
+    private let monitor = NWPathMonitor()
+    
+    // MARK: - Public Properties
+    /// If `true` the device is connected to the network. If `false` the device is not connected to the network.
+    public var isConnectedToNetwork: Bool = false
+
+    // MARK: - Initializers
+    /// Creates a new instance.
+    init() {
+        // Watch for the connection status changing.
+        monitor.pathUpdateHandler = { [self] path in
+            
+            // Is the device connected?
+            if path.status == .satisfied {
+                // Yes, mark as connected.
+                isConnectedToNetwork = true
+            } else {
+                // No, mark as not connected.
+                isConnectedToNetwork = false
+            }
+        }
+        
+        // Start the monitor running.
+        monitor.start(queue: .global())
+    }
+
+    // MARK: - Deinitializers
+    /// Disposes of an instance.
+    deinit {
+        // Stop the monitor.
+        monitor.cancel()
+    }
+}
+#else
 import Foundation
 import SystemConfiguration
 import Network
 
 /// A utility to check if the device the app is running on has network connectivity.
-open class NetworkConnection: @unchecked Sendable {
+open class NetworkConnection: Observable, @unchecked Sendable {
     /// Handler for the network connection statu changing.
     public typealias NetworkStatusChanged = (Bool) -> Void
     
