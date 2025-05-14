@@ -10,7 +10,7 @@ import Foundation
 import Network
 
 /// A utility to check if the device the app is running on has network connectivity.
-open class NetworkConnection: Observable, @unchecked Sendable {
+@Observable open class NetworkConnection: @unchecked Sendable {
     
     // MARK: - Static Properties
     /// Provides a common, shared instance of the class.
@@ -57,7 +57,7 @@ import SystemConfiguration
 import Network
 
 /// A utility to check if the device the app is running on has network connectivity.
-open class NetworkConnection: Observable, @unchecked Sendable {
+@Observable open class NetworkConnection: @unchecked Sendable {
     /// Handler for the network connection statu changing.
     public typealias NetworkStatusChanged = (Bool) -> Void
     
