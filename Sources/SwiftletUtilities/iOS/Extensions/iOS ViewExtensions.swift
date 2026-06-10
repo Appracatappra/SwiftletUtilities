@@ -42,7 +42,10 @@ extension View {
         UIApplication.shared.windows.first!.rootViewController?.view.addSubview(controller.view)
         #endif
         
-        let size = controller.sizeThatFits(in: UIScreen.main.bounds.size)
+        let currentViewSize = controller.view.bounds.size
+        let fittingSize = controller.view.window?.windowScene?.screen.bounds.size
+            ?? (currentViewSize == .zero ? UIView.layoutFittingExpandedSize : currentViewSize)
+        let size = controller.sizeThatFits(in: fittingSize)
         controller.view.bounds = CGRect(origin: .zero, size: size)
         controller.view.sizeToFit()
         

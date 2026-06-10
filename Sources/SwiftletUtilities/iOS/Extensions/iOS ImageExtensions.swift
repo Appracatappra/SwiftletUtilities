@@ -178,7 +178,7 @@ extension UIImage {
     ///   - topImageSize: The size of the `UIImage` to overlay.
     ///   - combinedImage: A callback that receives the new combined image.
     public func overlayWithAsync(image: UIImage, posX: CGFloat, posY: CGFloat, topImageSize: CGSize,
-                     combinedImage: @escaping (UIImage) -> Void) {
+                     combinedImage: @MainActor @escaping (UIImage) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             let newWidth = self.size.width < posX + image.size.width ? posX + image.size.width : self.size.width
             let newHeight = self.size.height < posY + image.size.height ? posY + image.size.height : self.size.height

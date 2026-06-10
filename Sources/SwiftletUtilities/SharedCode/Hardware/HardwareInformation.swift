@@ -179,7 +179,11 @@ open class HardwareInformation {
         }
         
         // Return the scene's orientation.
-        return windowScene.interfaceOrientation
+        if #available(iOS 26.0, *) {
+            return windowScene.effectiveGeometry.interfaceOrientation
+        } else {
+            return windowScene.interfaceOrientation
+        }
     }
 
     /// Returns the current orientation of the device.
@@ -241,10 +245,18 @@ open class HardwareInformation {
     #endif
     
     #if os(iOS)
+    private static var currentScreenBounds: CGRect {
+        let windowScene = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive }
+        
+        return windowScene?.screen.bounds ?? CGRect(origin: .zero, size: CGSize(width: 1024, height: 800))
+    }
+    
     /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
     ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
     public static var deviceDimentions:String {
-        let screenSize: CGRect = UIScreen.main.bounds
+        let screenSize: CGRect = currentScreenBounds
         
         let screenWidth = Int(screenSize.width)
         let screenHeight = Int(screenSize.height)
@@ -254,18 +266,20 @@ open class HardwareInformation {
     
     /// Returns the full width of the main screen of the device the app is running on.
     public static var screenWidth:Int {
-        let screenSize: CGRect = UIScreen.main.bounds
+        let screenSize: CGRect = currentScreenBounds
         return Int(screenSize.width)
     }
     
     /// Returns the height of the main screen of the device that the app is running on.
     public static var screenHeight:Int {
-        let screenSize: CGRect = UIScreen.main.bounds
+        let screenSize: CGRect = currentScreenBounds
         return Int(screenSize.height)
     }
     
     /// Returns the screen size for the main device screen that the app is running on.
-    public static let screenSize = UIScreen.main.bounds.size
+    public static var screenSize: CGSize {
+        currentScreenBounds.size
+    }
     
     /// Lists out all font family names and the name of every font variation in the family for use inside of a Font call in an app.
     /// - Remark: Based on https://codewithchris.com/common-mistakes-with-adding-custom-fonts-to-your-ios-app/
