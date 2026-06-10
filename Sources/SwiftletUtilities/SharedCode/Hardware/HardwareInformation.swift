@@ -154,22 +154,6 @@ open class HardwareInformation {
         #endif
     }
     
-    #if os(watchOS) || os(iOS)
-    /// Returns the current active screen or `nil` if not found.
-    public static var currentScreen: UIScreen? {
-        let windowScene = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first { $0.activationState == .foregroundActive }
-        
-        return windowScene?.screen
-    }
-    
-    /// Returns the current screen bounds or (0, 0, 1024, 800) if not able to get bounds.
-    public static var currentScreenBounds: CGRect {
-        return currentScreen?.bounds ?? CGRect(origin: .zero, size: CGSize(width: 1024, height: 800))
-    }
-    #endif
-    
     #if os(tvOS)
     /// Creates a fake orientation so I can ealisy maintain compatibility between the iOS/iPadOS version and the tvOS version of the SwiftUI code.
     public static var deviceOrientation: UIDeviceOrientation {
@@ -260,7 +244,21 @@ open class HardwareInformation {
     public static let screenSize = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1024, height: 800)
     #endif
     
-    #if os(iOS)
+    #if os(iOS) || os(tvOS)
+    /// Returns the current active screen or `nil` if not found.
+    public static var currentScreen: UIScreen? {
+        let windowScene = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive }
+        
+        return windowScene?.screen
+    }
+    
+    /// Returns the current screen bounds or (0, 0, 1024, 800) if not able to get bounds.
+    public static var currentScreenBounds: CGRect {
+        return currentScreen?.bounds ?? CGRect(origin: .zero, size: CGSize(width: 1024, height: 800))
+    }
+    
     /// This property returns a `String` containing the form `1024x786` that can be used to add customized "hints" to a SwiftUI view based on the screen vsize of the device being run on.
     ///  - Remark: I typically use this property with a `switch` statement to do things like adjust the font size, etc.
     public static var deviceDimentions:String {
