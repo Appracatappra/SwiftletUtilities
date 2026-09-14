@@ -51,10 +51,10 @@ extension Color {
     /**
      Initializes a `UIColor` from a hex string in the format `rrggbb` or `rrggbbaa` where:
      
-     * `rr` - Specifies the red component as a hex value in the range 00 to FF.
-     * `gg` - Specifies the green component as a hex value in the range 00 to FF.
-     * `bb` - Specifies the blue component as a hex value in the range 00 to FF.
-     * `aa` - Specifies the alpha component as a hex value in the range 00 to FF.
+     `rr` - Specifies the red component as a hex value in the range 00 to FF.
+     `gg` - Specifies the green component as a hex value in the range 00 to FF.
+     `bb` - Specifies the blue component as a hex value in the range 00 to FF.
+     `aa` - Specifies the alpha component as a hex value in the range 00 to FF.
      
      The hex string can optionally start with the prefix of `#`.
      
@@ -65,8 +65,9 @@ extension Color {
      ```
      
      - Parameter hex: The hex value to convert to a `UIColor`.
+     - Parameter colorSpace: The colorspace to convert into.
      */
-    public init?(fromHex hex: String) {
+    public init?(fromHex hex: String, colorSpace: Color.RGBColorSpace = .sRGB) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
         
@@ -96,7 +97,7 @@ extension Color {
             return nil
         }
         
-        self.init(RGBColorSpace.sRGBLinear, red: Double(r), green: Double(g), blue: Double(b), opacity: Double(a))
+        self.init(colorSpace, red: Double(r), green: Double(g), blue: Double(b), opacity: Double(a))
     }
     
     /**
